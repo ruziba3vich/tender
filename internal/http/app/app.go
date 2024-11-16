@@ -78,8 +78,8 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 	tenders := router.Group("/tenders")
 	{
 		tenders.POST("", handler.TenderHandler.CreateTender)
-		tenders.GET("", handler.TenderHandler.GetTender)
-		tenders.PUT("/:id", handler.TenderHandler.UpdateTender)
+		tenders.GET("/:id", handler.TenderHandler.GetTender)
+		tenders.PUT("", handler.TenderHandler.UpdateTender)
 		tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
 	}
 	// Start the server
