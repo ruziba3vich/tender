@@ -10,3 +10,10 @@ type ContractorCaching struct {
 	redisClient *redis.Client
 	logger      *slog.Logger
 }
+
+func NewContractorCaching(client *redis.Client, logger *slog.Logger) *ContractorCaching {
+	return &ContractorCaching{
+		redisClient: client,
+		logger:      logger,
+	}
+}

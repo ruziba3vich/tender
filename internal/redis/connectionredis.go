@@ -8,17 +8,20 @@ import (
 )
 
 type RedisService struct {
-	notification *NotificationCaching
-	user         *UserCaching
-	tender       *TenderCaching
-	bid          *BidCaching
-	contractor   *ContractorCaching
+	Notification *NotificationCaching
+	User         *UserCaching
+	Tender       *TenderCaching
+	Bid          *BidCaching
+	Contractor   *ContractorCaching
 }
 
 func New(redisDb *redis.Client, logger *slog.Logger) *RedisService {
 	return &RedisService{
-		logger:  logger,
-		redisDb: redisDb,
+		Notification: NewNotificationCaching(redisDb, logger),
+		User:         NewUserCaching(redisDb, logger),
+		Tender:       NewTenderCaching(redisDb, logger),
+		Bid:          NewBidCaching(redisDb, logger),
+		Contractor:   NewContractorCaching(redisDb, logger),
 	}
 }
 
