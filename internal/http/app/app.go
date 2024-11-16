@@ -34,12 +34,13 @@ import (
 	// "github.com/abdulazizax/mini-twitter/api-service/internal/items/http/handler"
 	// "github.com/abdulazizax/mini-twitter/api-service/internal/pkg/config"
 
-	"github.com/casbin/casbin"
+	"github.com/casbin/casbin/v2"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/zohirovs/internal/config"
 	_ "github.com/zohirovs/internal/http/app/docs"
 	"github.com/zohirovs/internal/http/handler"
+	"github.com/zohirovs/internal/middleware"
 
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -77,11 +78,12 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 
 	// API ednpoints
 	tenders := router.Group("/tenders")
+	tenders.Use(middleware.AuthzMiddleware("/tenders", enforcer, config))
 	{
 		tenders.POST("", handler.TenderHandler.CreateTender)
-		tenders.GET("/:id", handler.TenderHandler.GetTender)
-		tenders.PUT("", handler.TenderHandler.UpdateTender)
-		tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
+		tenders.GET("", handler.TenderHandler.GetTender)
+		tenders.PUT(":id/status", handler.TenderHandler.UpdateTenderStatus)
+		tenders.DELETE("", handler.TenderHandler.DeleteTender)
 	}
 	// Start the server
 	return router.Run(config.Server.Port)
