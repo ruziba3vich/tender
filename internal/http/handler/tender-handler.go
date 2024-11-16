@@ -15,7 +15,7 @@ type TenderHandler struct {
 	logger *slog.Logger
 }
 
-func NewTenderHandler(ser *service.TenderService, logger *slog.Logger) *TenderHandler {
+func NewTenderHandler(logger *slog.Logger, ser *service.TenderService) *TenderHandler {
 	return &TenderHandler{
 		ser:    ser,
 		logger: logger,
