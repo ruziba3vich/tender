@@ -77,7 +77,10 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 	// API ednpoints
 	tenders := router.Group("/tenders")
 	{
-		tenders.POST("")
+		tenders.POST("", handler.TenderHandler.CreateTender)
+		tenders.GET("", handler.TenderHandler.GetTender)
+		tenders.PUT("/:id", handler.TenderHandler.UpdateTender)
+
 	}
 	// Start the server
 	return router.Run(config.Server.Port)

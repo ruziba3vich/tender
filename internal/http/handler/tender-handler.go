@@ -1,3 +1,11 @@
+/*
+ * @Author: javohir-a abdusamatovjavohir@gmail.com
+ * @Date: 2024-11-17 00:47:41
+ * @LastEditors: javohir-a abdusamatovjavohir@gmail.com
+ * @LastEditTime: 2024-11-17 00:50:34
+ * @FilePath: /tender/internal/http/handler/tender-handler.go
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 package handler
 
 import (
@@ -15,7 +23,7 @@ type TenderHandler struct {
 	logger *slog.Logger
 }
 
-func NewTenderHandler(ser *service.TenderService, logger *slog.Logger) *TenderHandler {
+func NewTenderHandler(logger *slog.Logger, ser *service.TenderService) *TenderHandler {
 	return &TenderHandler{
 		ser:    ser,
 		logger: logger,
