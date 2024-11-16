@@ -6,8 +6,8 @@ import (
 	"log/slog"
 
 	"github.com/zohirovs/internal/models"
-	"github.com/zohirovs/internal/redis"
 	"github.com/zohirovs/internal/repos"
+	"github.com/zohirovs/internal/storage/redis"
 )
 
 type TenderService struct {

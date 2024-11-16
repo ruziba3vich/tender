@@ -1,9 +1,9 @@
-package storage
+package mongo
 
 import (
 	"log/slog"
 
-	"github.com/zohirovs/internal/redis"
+	"github.com/zohirovs/internal/storage/redis"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
