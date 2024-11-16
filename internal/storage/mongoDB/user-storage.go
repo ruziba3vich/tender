@@ -1,4 +1,4 @@
-package mongo
+package mongodb
 
 import (
 	"log/slog"
@@ -15,7 +15,7 @@ type UserStorage struct {
 
 func NewUserStorage(db *mongo.Database, logger *slog.Logger, cache *redis.UserCaching) *UserStorage {
 	return &UserStorage{
-		db:        db.Collection("User"),
+		db:        db.Collection("Users"),
 		logger:    logger,
 		userCache: cache,
 	}

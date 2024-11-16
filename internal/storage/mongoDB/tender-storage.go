@@ -1,4 +1,4 @@
-package mongo
+package mongodb
 
 import (
 	"context"
@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/zohirovs/internal/models"
+	"github.com/zohirovs/internal/storage/redis"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -15,14 +16,16 @@ import (
 )
 
 type TenderStorage struct {
-	db     *mongo.Collection
-	logger *slog.Logger
+	db          *mongo.Collection
+	logger      *slog.Logger
+	tenderCache *redis.TenderCaching
 }
 
-func NewTenderStorage(db *mongo.Database, logger *slog.Logger) *TenderStorage {
+func NewTenderStorage(db *mongo.Database, logger *slog.Logger, cache *redis.TenderCaching) *TenderStorage {
 	return &TenderStorage{
-		db:     db.Collection("tenders"),
-		logger: logger,
+		db:          db.Collection("Tenders"),
+		logger:      logger,
+		tenderCache: cache,
 	}
 }
 
