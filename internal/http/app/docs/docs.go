@@ -44,7 +44,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Tender"
+                            "$ref": "#/definitions/github_com_zohirovs_internal_models.Tender"
                         }
                     }
                 ],
@@ -52,19 +52,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/models.Tender"
+                            "$ref": "#/definitions/github_com_zohirovs_internal_models.Tender"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/handler.ErrorResponse"
+                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/handler.ErrorResponse"
+                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
                         }
                     }
                 }
@@ -88,7 +88,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Tender"
+                            "$ref": "#/definitions/github_com_zohirovs_internal_models.Tender"
                         }
                     }
                 ],
@@ -96,19 +96,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Created",
                         "schema": {
-                            "$ref": "#/definitions/models.Tender"
+                            "$ref": "#/definitions/github_com_zohirovs_internal_models.Tender"
                         }
                     },
                     "400": {
                         "description": "Bad Request",
                         "schema": {
-                            "$ref": "#/definitions/handler.ErrorResponse"
+                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/handler.ErrorResponse"
+                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
                         }
                     }
                 }
@@ -140,19 +140,19 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/models.Tender"
+                            "$ref": "#/definitions/github_com_zohirovs_internal_models.Tender"
                         }
                     },
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/handler.ErrorResponse"
+                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/handler.ErrorResponse"
+                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
                         }
                     }
                 }
@@ -185,13 +185,13 @@ const docTemplate = `{
                     "404": {
                         "description": "Not Found",
                         "schema": {
-                            "$ref": "#/definitions/handler.ErrorResponse"
+                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
                         }
                     },
                     "500": {
                         "description": "Internal Server Error",
                         "schema": {
-                            "$ref": "#/definitions/handler.ErrorResponse"
+                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
                         }
                     }
                 }
@@ -199,15 +199,7 @@ const docTemplate = `{
         }
     },
     "definitions": {
-        "handler.ErrorResponse": {
-            "type": "object",
-            "properties": {
-                "error": {
-                    "type": "string"
-                }
-            }
-        },
-        "models.Tender": {
+        "github_com_zohirovs_internal_models.Tender": {
             "type": "object",
             "properties": {
                 "attachment_url": {
@@ -235,6 +227,14 @@ const docTemplate = `{
                     "type": "string"
                 }
             }
+        },
+        "internal_http_handler.ErrorResponse": {
+            "type": "object",
+            "properties": {
+                "error": {
+                    "type": "string"
+                }
+            }
         }
     },
     "securityDefinitions": {
@@ -256,8 +256,6 @@ var SwaggerInfo = &swag.Spec{
 	Description:      "API Endpoints for MiniTwitter",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
-	LeftDelim:        "{{",
-	RightDelim:       "}}",
 }
 
 func init() {

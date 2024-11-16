@@ -38,6 +38,7 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/zohirovs/internal/config"
+	_ "github.com/zohirovs/internal/http/app/docs"
 	"github.com/zohirovs/internal/http/handler"
 
 	swaggerFiles "github.com/swaggo/files"
