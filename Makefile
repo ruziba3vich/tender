@@ -1,52 +1,26 @@
-SHELL := /bin/bash
+CURRENT_DIR=$(shell pwd)
+DB_URL=postgres://postgres:pass@localhost:5432/twitter?sslmode=disable
 
-include .env
-export $(shell sed 's/=.*//' .env)
+proto-gen:
+	./scripts/gen-proto.sh ${CURRENT_DIR}
 
-generate-env:
-	@./generate_db_url.sh > .generated_env
-	@echo "Generated .generated_env:"
-	@cat .generated_env
-	@source .generated_env
+run :
+	go run cmd/main.go
+  
+migrate_up:
+	migrate -path migrations -database ${DB_URL}  -verbose up
 
-migrate-create: generate-env ### create new migration
-	@source .generated_env && migrate create -ext sql -dir migrations 'insert_to_tables'
-.PHONY: migrate-create
+migrate_down:
+	migrate -path migrations -database ${DB_URL}  -verbose down
 
-migrate-up: generate-env ### migration up
-	@source .generated_env && migrate -path migrations -database "$$DB_URL" up
-.PHONY: migrate-up
+migrate_force:
+	migrate -path migrations -database ${DB_URL}  -verbose force 1
 
-migrate-down: generate-env ### migration down
-	@source .generated_env && migrate -path migrations -database "$$DB_URL" down
-.PHONY: migrate-down
+migrate_file:
+	migrate create -ext sql -dir migrations -seq create_tables
 
-migrate-force: generate-env ### force migration to version 1
-	@source .generated_env && migrate -path migrations -database "$$DB_URL" force 1
-.PHONY: migrate-force
+test:
+	go test -v -cover ./...
 
-migrate-file: generate-env ### create a new migration file
-	@source .generated_env && migrate create -ext sql -dir migrations/ -seq init_tables
-.PHONY: migrate-file
-
-give-permissions:
-	- chmod +x additional.sh
-	- chmod +x generate_db_url.sh
-
-PORT ?= 8080
-
-swag-gen:
-	swag init -g ./internal/http/app/app.go -o ./internal/http/app/docs
-kill-port:
-	@echo "Checking if port $(PORT) is in use..."
-	@PID=$$(lsof -ti :$(PORT) -sTCP:LISTEN); \
-	if [ -n "$$PID" ]; then \
-	  echo "Port $(PORT) is in use by process $$PID. Killing it..."; \
-	  kill -9 $$PID; \
-	else \
-	  echo "Port $(PORT) is free."; \
-	fi
-
-run: kill-port
-	@echo "Starting Go application..."
-	@go run cmd/main.go
+swag_init:
+	swag init -g internal/http/app/app.go --parseDependency -o internal/http/app/docs

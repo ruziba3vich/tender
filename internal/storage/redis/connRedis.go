@@ -9,6 +9,8 @@
 package redis
 
 import (
+	"context"
+	"fmt"
 	"log/slog"
 
 	"github.com/go-redis/redis/v8"
@@ -33,12 +35,18 @@ func New(redisDb *redis.Client, logger *slog.Logger) *RedisService {
 	}
 }
 
-func NewRedisClient(cfg *config.Config) *redis.Client {
+func NewRedisClient(cfg *config.Config) (*redis.Client, error) {
 	rdb := redis.NewClient(&redis.Options{
 		Addr:     cfg.RedisURI,
-		Password: "",
+		Password: "", // Change this if password is required
 		DB:       0,
 	})
 
-	return rdb
+	// Check Redis connection
+	_, err := rdb.Ping(context.Background()).Result()
+	if err != nil {
+		return nil, fmt.Errorf("failed to connect to Redis: %w", err)
+	}
+
+	return rdb, nil
 }
