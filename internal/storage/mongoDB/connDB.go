@@ -17,7 +17,6 @@ func ConnectDB(config *config.Config) (*mongo.Database, error) {
 		config.MongoDb.Password,
 		config.MongoDb.Host,
 		config.MongoDb.Port)
-	fmt.Println(uri)
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 

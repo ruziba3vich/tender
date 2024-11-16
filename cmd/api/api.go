@@ -42,8 +42,14 @@ func Run() error {
 		return err
 	}
 
+	redisClient, err := redis.NewRedisClient(cfg)
+	if err != nil {
+		logger.Error("Error while connecting to Redis", slog.String("err", err.Error()))
+		return err
+	}
+
 	// Initialize Redis client and service
-	redisService := redis.New(redis.NewRedisClient(cfg), logger)
+	redisService := redis.New(redisClient, logger)
 
 	// Initialize storage layer with MongoDB and Redis
 	storage := storage.New(db, logger, redisService)
