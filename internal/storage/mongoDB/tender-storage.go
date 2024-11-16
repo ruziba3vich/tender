@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/zohirovs/internal/models"
+	"github.com/zohirovs/internal/repos"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -19,7 +20,7 @@ type TenderStorage struct {
 	logger *slog.Logger
 }
 
-func NewTenderStorage(db *mongo.Database, logger *slog.Logger) *TenderStorage {
+func NewTenderStorage(db *mongo.Database, logger *slog.Logger) repos.TenderRepo {
 	return &TenderStorage{
 		db:     db.Collection("tenders"),
 		logger: logger,

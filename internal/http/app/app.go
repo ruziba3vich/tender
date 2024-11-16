@@ -75,7 +75,10 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 	router.Use(gin.Recovery())
 
 	// API ednpoints
-
+	tenders := router.Group("/tenders")
+	{
+		tenders.POST("")
+	}
 	// Start the server
 	return router.Run(config.Server.Port)
 }
