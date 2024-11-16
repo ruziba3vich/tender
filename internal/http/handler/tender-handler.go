@@ -1,11 +1,3 @@
-/*
- * @Author: javohir-a abdusamatovjavohir@gmail.com
- * @Date: 2024-11-17 00:47:41
- * @LastEditors: javohir-a abdusamatovjavohir@gmail.com
- * @LastEditTime: 2024-11-17 00:50:34
- * @FilePath: /tender/internal/http/handler/tender-handler.go
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 package handler
 
 import (
@@ -18,16 +10,23 @@ import (
 	"github.com/zohirovs/internal/service"
 )
 
+// TenderHandler handles tender-related HTTP requests
 type TenderHandler struct {
 	ser    *service.TenderService
 	logger *slog.Logger
 }
 
+// NewTenderHandler creates a new TenderHandler
 func NewTenderHandler(logger *slog.Logger, ser *service.TenderService) *TenderHandler {
 	return &TenderHandler{
 		ser:    ser,
 		logger: logger,
 	}
+}
+
+// ErrorResponse represents a generic error response
+type ErrorResponse struct {
+	Error string `json:"error"`
 }
 
 // CreateTender godoc
@@ -37,22 +36,22 @@ func NewTenderHandler(logger *slog.Logger, ser *service.TenderService) *TenderHa
 // @Accept       json
 // @Produce      json
 // @Param        tender body     models.Tender true "Tender object"
-// @Success      201    {object} models.Tender
-// @Failure      400    {object} gin.H {"error": "Invalid request"}
-// @Failure      500    {object} gin.H {"error": "Failed to create tender"}
+// @Success      201 {object} models.Tender
+// @Failure      400 {object} ErrorResponse
+// @Failure      500 {object} ErrorResponse
 // @Router       /tenders [post]
 func (h *TenderHandler) CreateTender(c *gin.Context) {
 	var tender models.Tender
 	if err := c.ShouldBindJSON(&tender); err != nil {
 		h.logger.Error("failed to bind JSON", "error", err)
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
+		c.JSON(http.StatusBadRequest, ErrorResponse{Error: "Invalid request"})
 		return
 	}
 
 	createdTender, err := h.ser.CreateTender(c.Request.Context(), &tender)
 	if err != nil {
 		h.logger.Error("failed to create tender", "error", err)
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create tender"})
+		c.JSON(http.StatusInternalServerError, ErrorResponse{Error: "Failed to create tender"})
 		return
 	}
 
@@ -67,8 +66,8 @@ func (h *TenderHandler) CreateTender(c *gin.Context) {
 // @Produce      json
 // @Param        id path     string true "Tender ID"
 // @Success      200 {object} models.Tender
-// @Failure      404 {object} gin.H {"error": "Tender not found"}
-// @Failure      500 {object} gin.H {"error": "Failed to get tender"}
+// @Failure      404 {object} ErrorResponse
+// @Failure      500 {object} ErrorResponse
 // @Router       /tenders/{id} [get]
 func (h *TenderHandler) GetTender(c *gin.Context) {
 	id := c.Param("id")
@@ -76,12 +75,12 @@ func (h *TenderHandler) GetTender(c *gin.Context) {
 	tender, err := h.ser.GetTender(c.Request.Context(), id)
 	if err != nil {
 		h.logger.Error("failed to get tender", "error", err)
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to get tender"})
+		c.JSON(http.StatusInternalServerError, ErrorResponse{Error: "Failed to get tender"})
 		return
 	}
 
 	if tender == nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "Tender not found"})
+		c.JSON(http.StatusNotFound, ErrorResponse{Error: "Tender not found"})
 		return
 	}
 
@@ -96,21 +95,21 @@ func (h *TenderHandler) GetTender(c *gin.Context) {
 // @Produce      json
 // @Param        tender body     models.Tender true "Tender object"
 // @Success      200 {object} models.Tender
-// @Failure      400 {object} gin.H {"error": "Invalid request"}
-// @Failure      500 {object} gin.H {"error": "Failed to update tender"}
+// @Failure      400 {object} ErrorResponse
+// @Failure      500 {object} ErrorResponse
 // @Router       /tenders [put]
 func (h *TenderHandler) UpdateTender(c *gin.Context) {
 	var tender models.Tender
 	if err := c.ShouldBindJSON(&tender); err != nil {
 		h.logger.Error("failed to bind JSON", "error", err)
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
+		c.JSON(http.StatusBadRequest, ErrorResponse{Error: "Invalid request"})
 		return
 	}
 
 	updatedTender, err := h.ser.UpdateTender(c.Request.Context(), &tender)
 	if err != nil {
 		h.logger.Error("failed to update tender", "error", err)
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update tender"})
+		c.JSON(http.StatusInternalServerError, ErrorResponse{Error: "Failed to update tender"})
 		return
 	}
 
@@ -125,15 +124,16 @@ func (h *TenderHandler) UpdateTender(c *gin.Context) {
 // @Produce      json
 // @Param        id path     string true "Tender ID"
 // @Success      204
-// @Failure      404 {object} gin.H {"error": "Tender not found"}
-// @Failure      500 {object} gin.H {"error": "Failed to delete tender"}
+// @Failure      404 {object} ErrorResponse
+// @Failure      500 {object} ErrorResponse
 // @Router       /tenders/{id} [delete]
 func (h *TenderHandler) DeleteTender(c *gin.Context) {
 	id := c.Param("id")
 
-	if err := h.ser.DeleteTender(c.Request.Context(), id); err != nil {
+	err := h.ser.DeleteTender(c.Request.Context(), id)
+	if err != nil {
 		h.logger.Error("failed to delete tender", "error", err)
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to delete tender"})
+		c.JSON(http.StatusInternalServerError, ErrorResponse{Error: "Failed to delete tender"})
 		return
 	}
 

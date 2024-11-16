@@ -80,7 +80,7 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 		tenders.POST("", handler.TenderHandler.CreateTender)
 		tenders.GET("", handler.TenderHandler.GetTender)
 		tenders.PUT("/:id", handler.TenderHandler.UpdateTender)
-
+		tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
 	}
 	// Start the server
 	return router.Run(config.Server.Port)

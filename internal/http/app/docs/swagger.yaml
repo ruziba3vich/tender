@@ -1,0 +1,163 @@
+basePath: /
+definitions:
+  handler.ErrorResponse:
+    properties:
+      error:
+        type: string
+    type: object
+  models.Tender:
+    properties:
+      attachment_url:
+        type: string
+      budget:
+        type: number
+      client_id:
+        type: string
+      deadline:
+        type: string
+      desription:
+        type: string
+      status:
+        type: string
+      tender_id:
+        type: string
+      title:
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: API Endpoints for MiniTwitter
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: '# MiniTwitter'
+  version: 1.03.67.83.145
+paths:
+  /tenders:
+    post:
+      consumes:
+      - application/json
+      description: Create a new tender and store it in the database
+      parameters:
+      - description: Tender object
+        in: body
+        name: tender
+        required: true
+        schema:
+          $ref: '#/definitions/models.Tender'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/models.Tender'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Create a new tender
+      tags:
+      - tenders
+    put:
+      consumes:
+      - application/json
+      description: Update the details of an existing tender
+      parameters:
+      - description: Tender object
+        in: body
+        name: tender
+        required: true
+        schema:
+          $ref: '#/definitions/models.Tender'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Tender'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Update a tender
+      tags:
+      - tenders
+  /tenders/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a tender from the database by its ID
+      parameters:
+      - description: Tender ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Delete a tender
+      tags:
+      - tenders
+    get:
+      consumes:
+      - application/json
+      description: Retrieve a tender from the database by its ID
+      parameters:
+      - description: Tender ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Tender'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Get tender by ID
+      tags:
+      - tenders
+schemes:
+- http
+- https
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"
