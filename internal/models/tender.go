@@ -8,6 +8,7 @@ type (
 		Description string  `json:"desription"`
 		Budget      float32 `json:"budget"`
 		Status      Status  `json:"status"`
+		Deadline    string  `json:"deadline"`
 	}
 )
 

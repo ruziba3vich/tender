@@ -8,9 +8,10 @@ import (
 
 type (
 	Config struct {
-		Server  ServerConfig
-		MongoDb MongoDbConfig
-		JWT     JWTConfig
+		Server   ServerConfig
+		MongoDb  MongoDbConfig
+		JWT      JWTConfig
+		RedisURI string
 	}
 	JWTConfig struct {
 		SecretKey string
@@ -39,6 +40,7 @@ func (c *Config) Load() error {
 	c.MongoDb.User = os.Getenv("DB_USER")
 	c.MongoDb.Password = os.Getenv("DB_PASSWORD")
 	c.MongoDb.DBName = os.Getenv("DB_NAME")
+	c.RedisURI = os.Getenv("REDIS_URI")
 	c.JWT.SecretKey = os.Getenv("JWT_SECRET_KEY")
 
 	return nil
