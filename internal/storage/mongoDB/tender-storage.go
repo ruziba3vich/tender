@@ -118,6 +118,7 @@ func (s *TenderStorage) UpdateTender(ctx context.Context, updatedTender *models.
 	return &result, nil
 }
 
+// DeleteTender deletes a tender from the database by its ID. If the tender is not found, it returns an error.
 func (s *TenderStorage) DeleteTender(ctx context.Context, id string) error {
 	result, err := s.db.DeleteOne(ctx, bson.M{"tender_id": id})
 	if err != nil {
