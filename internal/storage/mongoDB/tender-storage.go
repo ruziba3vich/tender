@@ -1,3 +1,11 @@
+/*
+ * @Author: javohir-a abdusamatovjavohir@gmail.com
+ * @Date: 2024-11-17 04:57:41
+ * @LastEditors: javohir-a abdusamatovjavohir@gmail.com
+ * @LastEditTime: 2024-11-17 05:58:46
+ * @FilePath: /tender/internal/storage/mongoDB/tender-storage.go
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 package mongodb
 
 import (
@@ -43,11 +51,13 @@ func (s *TenderStorage) CreateTender(ctx context.Context, tender *models.Tender)
 		return nil, errors.New("deadline must be in the future")
 	}
 
+	tender.Status = string(models.OPEN)
+
 	_, err = s.db.InsertOne(ctx, tender)
 	if err != nil {
 		s.logger.Error("failed to create tender",
 			"error", err,
-			"tender_id", tender.TenderId)
+			"tenderid", tender.TenderId)
 		return nil, fmt.Errorf("failed to create tender: %w", err)
 	}
 
@@ -57,14 +67,14 @@ func (s *TenderStorage) CreateTender(ctx context.Context, tender *models.Tender)
 func (s *TenderStorage) GetTender(ctx context.Context, id string) (*models.Tender, error) {
 	var tender models.Tender
 
-	err := s.db.FindOne(ctx, bson.M{"tender_id": id}).Decode(&tender)
+	err := s.db.FindOne(ctx, bson.M{"tenderid": id}).Decode(&tender)
 	if err != nil {
 		if errors.Is(err, mongo.ErrNoDocuments) {
 			return nil, fmt.Errorf("tender not found: %s", id)
 		}
 		s.logger.Error("failed to get tender",
 			"error", err,
-			"tender_id", id)
+			"tenderid", id)
 		return nil, fmt.Errorf("failed to get tender: %w", err)
 	}
 
@@ -85,7 +95,7 @@ func (s *TenderStorage) UpdateTender(ctx context.Context, updatedTender *models.
 
 	update := bson.M{
 		"$set": bson.M{
-			"client_id":      updatedTender.ClientId,
+			"clientid":       updatedTender.ClientId,
 			"title":          updatedTender.Title,
 			"description":    updatedTender.Description,
 			"budget":         updatedTender.Budget,
@@ -100,7 +110,7 @@ func (s *TenderStorage) UpdateTender(ctx context.Context, updatedTender *models.
 	var result models.Tender
 	err := s.db.FindOneAndUpdate(
 		ctx,
-		bson.M{"tender_id": updatedTender.TenderId},
+		bson.M{"tenderid": updatedTender.TenderId},
 		update,
 		opts,
 	).Decode(&result)
@@ -111,7 +121,7 @@ func (s *TenderStorage) UpdateTender(ctx context.Context, updatedTender *models.
 		}
 		s.logger.Error("failed to update tender",
 			"error", err,
-			"tender_id", updatedTender.TenderId)
+			"tenderid", updatedTender.TenderId)
 		return nil, fmt.Errorf("failed to update tender: %w", err)
 	}
 
@@ -120,11 +130,11 @@ func (s *TenderStorage) UpdateTender(ctx context.Context, updatedTender *models.
 
 // DeleteTender deletes a tender from the database by its ID. If the tender is not found, it returns an error.
 func (s *TenderStorage) DeleteTender(ctx context.Context, id string) error {
-	result, err := s.db.DeleteOne(ctx, bson.M{"tender_id": id})
+	result, err := s.db.DeleteOne(ctx, bson.M{"tenderid": id})
 	if err != nil {
 		s.logger.Error("failed to delete tender",
 			"error", err,
-			"tender_id", id)
+			"tenderid", id)
 		return fmt.Errorf("failed to delete tender: %w", err)
 	}
 
@@ -153,14 +163,14 @@ func (s *TenderStorage) ListTenders(ctx context.Context, filter bson.M, opts *op
 }
 
 func (s *TenderStorage) ListTendersByClient(ctx context.Context, clientID string) ([]*models.Tender, error) {
-	filter := bson.M{"client_id": clientID}
+	filter := bson.M{"clientid": clientID}
 	return s.ListTenders(ctx, filter, nil)
 }
 
 func (s *TenderStorage) ListOpenTenders(ctx context.Context) ([]*models.Tender, error) {
 	now := time.Now().Format(time.RFC3339)
 	filter := bson.M{
-		"status":   "open",
+		"status":   "OPEN",
 		"deadline": bson.M{"$gt": now},
 	}
 	return s.ListTenders(ctx, filter, nil)
@@ -173,11 +183,11 @@ func (s *TenderStorage) UpdateStatus(ctx context.Context, id string, status mode
 		},
 	}
 
-	result, err := s.db.UpdateOne(ctx, bson.M{"tender_id": id}, update)
+	result, err := s.db.UpdateOne(ctx, bson.M{"tenderid": id}, update)
 	if err != nil {
 		s.logger.Error("failed to update tender status",
 			"error", err,
-			"tender_id", id,
+			"tenderid", id,
 			"status", status)
 		return fmt.Errorf("failed to update tender status: %w", err)
 	}
@@ -193,13 +203,13 @@ func (s *TenderStorage) CreateIndexes(ctx context.Context) error {
 	indexes := []mongo.IndexModel{
 		{
 			Keys: bson.D{
-				{Key: "tender_id", Value: 1},
+				{Key: "tenderid", Value: 1},
 			},
 			Options: options.Index().SetUnique(true),
 		},
 		{
 			Keys: bson.D{
-				{Key: "client_id", Value: 1},
+				{Key: "clientid", Value: 1},
 			},
 		},
 		{

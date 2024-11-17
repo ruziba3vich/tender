@@ -1,3 +1,11 @@
+/*
+ * @Author: javohir-a abdusamatovjavohir@gmail.com
+ * @Date: 2024-11-16 23:47:59
+ * @LastEditors: javohir-a abdusamatovjavohir@gmail.com
+ * @LastEditTime: 2024-11-17 05:27:21
+ * @FilePath: /tender/internal/http/app/app.go
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 // Package api API.
 //
 // @title # MiniTwitter
@@ -40,7 +48,6 @@ import (
 	"github.com/zohirovs/internal/config"
 	_ "github.com/zohirovs/internal/http/app/docs"
 	"github.com/zohirovs/internal/http/handler"
-	"github.com/zohirovs/internal/middleware"
 
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -78,12 +85,12 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 
 	// API ednpoints
 	tenders := router.Group("/tenders")
-	tenders.Use(middleware.AuthzMiddleware("/tenders", enforcer, config))
+	// tenders.Use(middleware.AuthzMiddleware("/tenders", enforcer, config))
 	{
 		tenders.POST("", handler.TenderHandler.CreateTender)
-		tenders.GET("", handler.TenderHandler.GetTender)
+		tenders.GET("/:id", handler.TenderHandler.GetTender)
 		tenders.PUT(":id/status", handler.TenderHandler.UpdateTenderStatus)
-		tenders.DELETE("", handler.TenderHandler.DeleteTender)
+		tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
 	}
 	// Start the server
 	return router.Run(config.Server.Port)

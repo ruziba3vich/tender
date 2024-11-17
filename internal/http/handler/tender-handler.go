@@ -61,6 +61,7 @@ func (h *TenderHandler) CreateTender(c *gin.Context) {
 		Title:         createTender.Title,
 		Description:   createTender.Description,
 		Deadline:      createTender.Deadline,
+		Budget:        createTender.Budget,
 		AttachmentUrl: createTender.AttachmentUrl,
 	}
 
@@ -116,19 +117,36 @@ func (h *TenderHandler) GetTender(c *gin.Context) {
 // @Failure      404     {object}  ErrorResponse
 // @Failure      500     {object}  ErrorResponse
 // @Router       /tenders/{id}/status [put]
+type StatusUpdateRequest struct {
+	Status models.Status `json:"status" binding:"required"`
+}
+
 func (h *TenderHandler) UpdateTenderStatus(c *gin.Context) {
 	// Extract tender ID from URL parameters
 	id := c.Param("id")
 
-	var status models.Status
-	if err := c.ShouldBindJSON(&status); err != nil {
+	// Bind the JSON body to the struct
+	var req StatusUpdateRequest
+	if err := c.ShouldBindJSON(&req); err != nil {
 		h.logger.Error("failed to bind JSON", "error", err)
-		c.JSON(http.StatusBadRequest, ErrorResponse{Error: "Invalid request"})
+		c.JSON(http.StatusBadRequest, ErrorResponse{Error: "Invalid request body"})
+		return
+	}
+
+	// Validate that the status is valid
+	validStatuses := map[models.Status]bool{
+		models.OPEN:    true,
+		models.CLOSED:  true,
+		models.AWARDED: true,
+	}
+	if !validStatuses[req.Status] {
+		h.logger.Error("invalid status provided", "status", req.Status)
+		c.JSON(http.StatusBadRequest, ErrorResponse{Error: "Invalid status value"})
 		return
 	}
 
 	// Call the service to update the tender status
-	if err := h.ser.UpdateTenderStatus(c.Request.Context(), id, status); err != nil {
+	if err := h.ser.UpdateTenderStatus(c.Request.Context(), id, req.Status); err != nil {
 		h.logger.Error("failed to update tender status", "error", err)
 		if err.Error() == "not found" {
 			c.JSON(http.StatusNotFound, ErrorResponse{Error: "Tender not found"})
