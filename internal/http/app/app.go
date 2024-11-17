@@ -25,11 +25,6 @@ package app
 import (
 	"log/slog"
 
-<<<<<<< HEAD
-	"github.com/casbin/casbin"
-	"github.com/gin-contrib/cors"
-	"github.com/gin-gonic/gin"
-=======
 	// _ "github.com/abdulazizax/mini-twitter/api-service/internal/items/http/app/docs"
 	// "github.com/abdulazizax/mini-twitter/api-service/internal/items/middleware"
 
@@ -47,11 +42,8 @@ import (
 	"github.com/zohirovs/internal/http/handler"
 	"github.com/zohirovs/internal/middleware"
 
->>>>>>> b8874a32dbe7e55fed34094ffbc74b5f3dd305f1
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
-	"github.com/zohirovs/internal/config"
-	"github.com/zohirovs/internal/http/handler"
 )
 
 // Run initializes and starts the HTTP server for the MiniTwitter API.
@@ -85,31 +77,29 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 	router.Use(gin.Recovery())
 
 	// API ednpoints
-<<<<<<< HEAD
 
 	// User endpoints
 	users := router.Group("/")
 	{
 		users.POST("/register", handler.UserHandler.RegisterUser)
 		users.POST("/login", handler.UserHandler.LoginUser)
-=======
-	tenders := router.Group("/tenders")
-	tenders.Use(middleware.AuthzMiddleware("/tenders", enforcer, config))
-	{
-		tenders.POST("", handler.TenderHandler.CreateTender)
-		tenders.GET("", handler.TenderHandler.GetTender)
-		tenders.PUT(":id/status", handler.TenderHandler.UpdateTenderStatus)
-		tenders.DELETE("", handler.TenderHandler.DeleteTender)
->>>>>>> b8874a32dbe7e55fed34094ffbc74b5f3dd305f1
-	}
+		tenders := router.Group("/tenders")
+		tenders.Use(middleware.AuthzMiddleware("/tenders", enforcer, config))
+		{
+			tenders.POST("", handler.TenderHandler.CreateTender)
+			tenders.GET("", handler.TenderHandler.GetTender)
+			tenders.PUT(":id/status", handler.TenderHandler.UpdateTenderStatus)
+			tenders.DELETE("", handler.TenderHandler.DeleteTender)
+		}
 
-	// tenders := router.Group("/tenders")
-	// {
-	// 	tenders.POST("", handler.TenderHandler.CreateTender)
-	// 	tenders.GET("/:id", handler.TenderHandler.GetTender)
-	// 	tenders.PUT("", handler.TenderHandler.UpdateTender)
-	// 	tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
-	// }
-	// Start the server
-	return router.Run(config.Server.Port)
+		// tenders := router.Group("/tenders")
+		// {
+		// 	tenders.POST("", handler.TenderHandler.CreateTender)
+		// 	tenders.GET("/:id", handler.TenderHandler.GetTender)
+		// 	tenders.PUT("", handler.TenderHandler.UpdateTender)
+		// 	tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
+		// }
+		// Start the server
+		return router.Run(config.Server.Port)
+	}
 }
