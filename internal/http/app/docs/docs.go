@@ -24,6 +24,98 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
+        "/login": {
+            "post": {
+                "description": "Authenticate user and return JWT token",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Login user",
+                "parameters": [
+                    {
+                        "description": "User login credentials",
+                        "name": "user",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/github_com_zohirovs_internal_models.LoginRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully logged in with token",
+                        "schema": {
+                            "$ref": "#/definitions/gin.H"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request",
+                        "schema": {
+                            "$ref": "#/definitions/gin.H"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/gin.H"
+                        }
+                    }
+                }
+            }
+        },
+        "/register": {
+            "post": {
+                "description": "Register a new user with the provided details",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Register a new user",
+                "parameters": [
+                    {
+                        "description": "User registration details",
+                        "name": "user",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/github_com_zohirovs_internal_models.RegisterUser"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Successfully registered user",
+                        "schema": {
+                            "$ref": "#/definitions/gin.H"
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid request",
+                        "schema": {
+                            "$ref": "#/definitions/gin.H"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/gin.H"
+                        }
+                    }
+                }
+            }
+        },
         "/tenders": {
             "post": {
                 "description": "Create a new tender and store it in the database",
@@ -152,81 +244,33 @@ const docTemplate = `{
                     }
                 }
             }
-        },
-        "/tenders/{id}/status": {
-            "put": {
-                "description": "Update the status of an existing tender by its ID",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "tenders"
-                ],
-                "summary": "Update the status of a tender",
-                "parameters": [
-                    {
-                        "type": "string",
-                        "description": "Tender ID",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    },
-                    {
-                        "description": "Tender Status",
-                        "name": "status",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/internal_http_handler.SuccessResponse"
-                        }
-                    },
-                    "400": {
-                        "description": "Bad Request",
-                        "schema": {
-                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
-                        }
-                    },
-                    "404": {
-                        "description": "Not Found",
-                        "schema": {
-                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
-                        }
-                    },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "schema": {
-                            "$ref": "#/definitions/internal_http_handler.ErrorResponse"
-                        }
-                    }
-                }
-            }
         }
     },
     "definitions": {
+        "gin.H": {
+            "type": "object",
+            "additionalProperties": {}
+        },
         "github_com_zohirovs_internal_models.CreateTender": {
             "type": "object",
+            "required": [
+                "attachment_url",
+                "budget",
+                "deadline",
+                "description",
+                "title"
+            ],
             "properties": {
                 "attachment_url": {
                     "type": "string"
                 },
                 "budget": {
-                    "type": "number"
+                    "type": "integer"
                 },
                 "deadline": {
                     "type": "string"
                 },
-                "desription": {
+                "description": {
                     "type": "string"
                 },
                 "title": {
@@ -234,14 +278,49 @@ const docTemplate = `{
                 }
             }
         },
+        "github_com_zohirovs_internal_models.LoginRequest": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_zohirovs_internal_models.RegisterUser": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "username": {
+                    "type": "string"
+                }
+            }
+        },
         "github_com_zohirovs_internal_models.Tender": {
             "type": "object",
+            "required": [
+                "attachment_url",
+                "budget",
+                "deadline",
+                "description",
+                "title"
+            ],
             "properties": {
                 "attachment_url": {
                     "type": "string"
                 },
                 "budget": {
-                    "type": "number"
+                    "type": "integer"
                 },
                 "client_id": {
                     "type": "string"
@@ -249,10 +328,12 @@ const docTemplate = `{
                 "deadline": {
                     "type": "string"
                 },
-                "desription": {
+                "description": {
+                    "description": "Fix typo here",
                     "type": "string"
                 },
                 "status": {
+                    "description": "Optional",
                     "type": "string"
                 },
                 "tender_id": {
@@ -267,14 +348,6 @@ const docTemplate = `{
             "type": "object",
             "properties": {
                 "error": {
-                    "type": "string"
-                }
-            }
-        },
-        "internal_http_handler.SuccessResponse": {
-            "type": "object",
-            "properties": {
-                "message": {
                     "type": "string"
                 }
             }

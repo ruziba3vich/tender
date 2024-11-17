@@ -1,16 +1,43 @@
 basePath: /
 definitions:
+  gin.H:
+    additionalProperties: {}
+    type: object
   github_com_zohirovs_internal_models.CreateTender:
     properties:
       attachment_url:
         type: string
       budget:
-        type: number
+        type: integer
       deadline:
         type: string
-      desription:
+      description:
         type: string
       title:
+        type: string
+    required:
+    - attachment_url
+    - budget
+    - deadline
+    - description
+    - title
+    type: object
+  github_com_zohirovs_internal_models.LoginRequest:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    type: object
+  github_com_zohirovs_internal_models.RegisterUser:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+      role:
+        type: string
+      username:
         type: string
     type: object
   github_com_zohirovs_internal_models.Tender:
@@ -18,28 +45,31 @@ definitions:
       attachment_url:
         type: string
       budget:
-        type: number
+        type: integer
       client_id:
         type: string
       deadline:
         type: string
-      desription:
+      description:
+        description: Fix typo here
         type: string
       status:
+        description: Optional
         type: string
       tender_id:
         type: string
       title:
         type: string
+    required:
+    - attachment_url
+    - budget
+    - deadline
+    - description
+    - title
     type: object
   internal_http_handler.ErrorResponse:
     properties:
       error:
-        type: string
-    type: object
-  internal_http_handler.SuccessResponse:
-    properties:
-      message:
         type: string
     type: object
 host: localhost:8080
@@ -56,6 +86,66 @@ info:
   title: '# MiniTwitter'
   version: 1.03.67.83.145
 paths:
+  /login:
+    post:
+      consumes:
+      - application/json
+      description: Authenticate user and return JWT token
+      parameters:
+      - description: User login credentials
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_zohirovs_internal_models.LoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Successfully logged in with token
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/gin.H'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/gin.H'
+      summary: Login user
+      tags:
+      - users
+  /register:
+    post:
+      consumes:
+      - application/json
+      description: Register a new user with the provided details
+      parameters:
+      - description: User registration details
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_zohirovs_internal_models.RegisterUser'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Successfully registered user
+          schema:
+            $ref: '#/definitions/gin.H'
+        "400":
+          description: Invalid request
+          schema:
+            $ref: '#/definitions/gin.H'
+        "500":
+          description: Internal server error
+          schema:
+            $ref: '#/definitions/gin.H'
+      summary: Register a new user
+      tags:
+      - users
   /tenders:
     post:
       consumes:
@@ -139,45 +229,6 @@ paths:
           schema:
             $ref: '#/definitions/internal_http_handler.ErrorResponse'
       summary: Get tender by ID
-      tags:
-      - tenders
-  /tenders/{id}/status:
-    put:
-      consumes:
-      - application/json
-      description: Update the status of an existing tender by its ID
-      parameters:
-      - description: Tender ID
-        in: path
-        name: id
-        required: true
-        type: string
-      - description: Tender Status
-        in: body
-        name: status
-        required: true
-        schema:
-          type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/internal_http_handler.SuccessResponse'
-        "400":
-          description: Bad Request
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-        "404":
-          description: Not Found
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-        "500":
-          description: Internal Server Error
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-      summary: Update the status of a tender
       tags:
       - tenders
 schemes:

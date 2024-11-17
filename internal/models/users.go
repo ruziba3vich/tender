@@ -28,6 +28,18 @@ type (
 		Username string `json:"username"`
 	}
 
+	RegisterClient struct {
+		Email    string `json:"email"`
+		Password string `json:"password"`
+		Username string `json:"username"`
+	}
+
+	RegisterContractor struct {
+		Email    string `json:"email"`
+		Password string `json:"password"`
+		Username string `json:"username"`
+	}
+
 	ResetPassword struct {
 		Email       string `json:"email"`
 		NewPassword string `json:"new_password"`

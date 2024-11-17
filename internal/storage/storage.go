@@ -3,6 +3,7 @@ package storage
 import (
 	"log/slog"
 
+	"github.com/zohirovs/internal/config"
 	"github.com/zohirovs/internal/repos"
 	mongodb "github.com/zohirovs/internal/storage/mongoDB"
 	"github.com/zohirovs/internal/storage/redis"
@@ -23,9 +24,9 @@ type Storage struct {
 	notificationRepo repos.NotificationRepo
 }
 
-func New(db *mongo.Database, logger *slog.Logger, cache *redis.RedisService) StorageI {
+func New(db *mongo.Database, cfg *config.Config, logger *slog.Logger, cache *redis.RedisService) StorageI {
 	return &Storage{
-		userRepo:         mongodb.NewUserStorage(db, logger, cache.User),
+		userRepo:         mongodb.NewUserStorage(db, cfg, logger, cache.User),
 		tenderRepo:       mongodb.NewTenderStorage(db, logger, cache.Tender),
 		bidRepo:          mongodb.NewBidStorage(db, logger, cache.Bid),
 		notificationRepo: mongodb.NewNotificationStorage(db, logger, cache.Notification),

@@ -1,11 +1,3 @@
-/*
- * @Author: javohir-a abdusamatovjavohir@gmail.com
- * @Date: 2024-11-16 23:47:59
- * @LastEditors: javohir-a abdusamatovjavohir@gmail.com
- * @LastEditTime: 2024-11-17 05:27:21
- * @FilePath: /tender/internal/http/app/app.go
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 // Package api API.
 //
 // @title # MiniTwitter
@@ -32,15 +24,6 @@ package app
 
 import (
 	"log/slog"
-
-	// _ "github.com/abdulazizax/mini-twitter/api-service/internal/items/http/app/docs"
-	// "github.com/abdulazizax/mini-twitter/api-service/internal/items/middleware"
-
-	// casbin "github.com/casbin/casbin/v2"
-	// "github.com/gin-contrib/cors"
-
-	// "github.com/abdulazizax/mini-twitter/api-service/internal/items/http/handler"
-	// "github.com/abdulazizax/mini-twitter/api-service/internal/pkg/config"
 
 	"github.com/casbin/casbin/v2"
 	"github.com/gin-contrib/cors"
@@ -84,14 +67,22 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 	router.Use(gin.Recovery())
 
 	// API ednpoints
-	tenders := router.Group("/tenders")
-	// tenders.Use(middleware.AuthzMiddleware("/tenders", enforcer, config))
+
+	// User endpoints
+	users := router.Group("/")
 	{
-		tenders.POST("", handler.TenderHandler.CreateTender)
-		tenders.GET("/:id", handler.TenderHandler.GetTender)
-		tenders.PUT(":id/status", handler.TenderHandler.UpdateTenderStatus)
-		tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
+		users.POST("/register", handler.UserHandler.RegisterUser)
+		users.POST("/login", handler.UserHandler.LoginUser)
+		tenders := router.Group("/tenders")
+		// tenders.Use(middleware.AuthzMiddleware("/tenders", enforcer, config))
+		{
+			tenders.POST("", handler.TenderHandler.CreateTender)
+			tenders.GET("/:id", handler.TenderHandler.GetTender)
+			tenders.PUT(":id/status", handler.TenderHandler.UpdateTenderStatus)
+			tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
+		}
+
+		// Start the server
+		return router.Run(config.Server.Port)
 	}
-	// Start the server
-	return router.Run(config.Server.Port)
 }
