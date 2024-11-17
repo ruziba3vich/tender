@@ -11,6 +11,7 @@ import (
 
 	"github.com/zohirovs/internal/models"
 	"github.com/zohirovs/internal/repos"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type UserService struct {
@@ -27,10 +28,10 @@ func NewUserService(userRepo repos.UserRepo, logger *slog.Logger) *UserService {
 
 // 1
 func (s *UserService) RegisterUser(ctx context.Context, user *models.RegisterUser) (string, error) {
-	// _, err := s.userRepo.GetUserByEmail(ctx, user.Email)
-	// if err == nil {
-	// 	return "", fmt.Errorf("user with this email already exists")
-	// }
+	_, err := s.userRepo.GetUserByEmail(ctx, user.Email)
+	if err == nil {
+		return "Duplicate", fmt.Errorf("user with this email already exists")
+	}
 
 	// isValid := s.isEmailExists(user.Email)
 	// if !isValid {
@@ -62,6 +63,14 @@ func (s *UserService) GetUserByUserID(ctx context.Context, userID string) (*mode
 	user, err := s.userRepo.GetUserByUserID(ctx, userID)
 	if err != nil {
 		return nil, fmt.Errorf("failed to get user by userID: %w", err)
+	}
+	return user, nil
+}
+
+func (s *UserService) GetUserByUsername(ctx context.Context, username string) (*models.User, error) {
+	user, err := s.userRepo.GetUserByUsername(ctx, username)
+	if err != nil {
+		return nil, fmt.Errorf("failed to get user by username: %w", err)
 	}
 	return user, nil
 }
@@ -114,6 +123,17 @@ func (s *UserService) SendVerificationCode(ctx context.Context, email string) er
 
 // 7
 func (s *UserService) Login(ctx context.Context, login *models.LoginRequest) (string, error) {
+	resp, err := s.userRepo.GetUserByUsername(ctx, login.Username)
+	if err != nil {
+		return "not found", fmt.Errorf("failed to get user by username: %w", err)
+	}
+
+	_, err = s.checkPassword(resp.Password, login.Password)
+	if err != nil {
+		s.logger.Error("Failed to check password", slog.String("error", err.Error()))
+		return "", fmt.Errorf("failed to check password: %w", err)
+	}
+
 	token, err := s.userRepo.Login(ctx, login)
 	if err != nil {
 		return "", fmt.Errorf("failed to login: %w", err)
@@ -162,4 +182,12 @@ func (s *UserService) isValidPassword(password string) bool {
 	var validPasswordRegex = `^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$`
 	re := regexp.MustCompile(validPasswordRegex)
 	return re.MatchString(password)
+}
+
+func (s *UserService) checkPassword(hashedPassword, password string) (bool, error) {
+	err := bcrypt.CompareHashAndPassword([]byte(hashedPassword), []byte(password))
+	if err != nil {
+		return false, fmt.Errorf("failed to compare password: %w", err)
+	}
+	return true, nil
 }

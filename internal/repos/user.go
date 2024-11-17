@@ -21,4 +21,6 @@ type UserRepo interface {
 	SendVerificationCode(ctx context.Context, email string) error
 	// 7
 	Login(ctx context.Context, login *models.LoginRequest) (string, error)
+
+	GetUserByUsername(ctx context.Context, username string) (*models.User, error)
 }
