@@ -1,5 +1,6 @@
 basePath: /
 definitions:
+<<<<<<< HEAD
   gin.H:
     additionalProperties: {}
     type: object
@@ -12,6 +13,19 @@ definitions:
       role:
         type: string
       username:
+=======
+  github_com_zohirovs_internal_models.CreateTender:
+    properties:
+      attachment_url:
+        type: string
+      budget:
+        type: number
+      deadline:
+        type: string
+      desription:
+        type: string
+      title:
+>>>>>>> b8874a32dbe7e55fed34094ffbc74b5f3dd305f1
         type: string
     type: object
   github_com_zohirovs_internal_models.Tender:
@@ -55,6 +69,11 @@ definitions:
   internal_http_handler.ErrorResponse:
     properties:
       error:
+        type: string
+    type: object
+  internal_http_handler.SuccessResponse:
+    properties:
+      message:
         type: string
     type: object
 host: localhost:8080
@@ -142,7 +161,7 @@ paths:
         name: tender
         required: true
         schema:
-          $ref: '#/definitions/github_com_zohirovs_internal_models.Tender'
+          $ref: '#/definitions/github_com_zohirovs_internal_models.CreateTender'
       produces:
       - application/json
       responses:
@@ -159,35 +178,6 @@ paths:
           schema:
             $ref: '#/definitions/internal_http_handler.ErrorResponse'
       summary: Create a new tender
-      tags:
-      - tenders
-    put:
-      consumes:
-      - application/json
-      description: Update the details of an existing tender
-      parameters:
-      - description: Tender object
-        in: body
-        name: tender
-        required: true
-        schema:
-          $ref: '#/definitions/github_com_zohirovs_internal_models.Tender'
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/github_com_zohirovs_internal_models.Tender'
-        "400":
-          description: Bad Request
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-        "500":
-          description: Internal Server Error
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-      summary: Update a tender
       tags:
       - tenders
   /tenders/{id}:
@@ -243,6 +233,45 @@ paths:
           schema:
             $ref: '#/definitions/internal_http_handler.ErrorResponse'
       summary: Get tender by ID
+      tags:
+      - tenders
+  /tenders/{id}/status:
+    put:
+      consumes:
+      - application/json
+      description: Update the status of an existing tender by its ID
+      parameters:
+      - description: Tender ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Tender Status
+        in: body
+        name: status
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_http_handler.SuccessResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+      summary: Update the status of a tender
       tags:
       - tenders
 schemes:

@@ -1,3 +1,11 @@
+/*
+ * @Author: javohir-a abdusamatovjavohir@gmail.com
+ * @Date: 2024-11-17 01:45:53
+ * @LastEditors: javohir-a abdusamatovjavohir@gmail.com
+ * @LastEditTime: 2024-11-17 04:24:33
+ * @FilePath: /tender/cmd/api/api.go
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 package api
 
 import (
@@ -6,7 +14,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/casbin/casbin"
+	"github.com/casbin/casbin/v2"
 	"github.com/zohirovs/internal/config"
 	"github.com/zohirovs/internal/http/app"
 	"github.com/zohirovs/internal/http/handler"
@@ -58,13 +66,13 @@ func Run() error {
 	service := service.NewService(redisService, logger, storage)
 
 	// Initialize HTTP handler
-	handler := handler.NewHandler(logger, service)
+	handler := handler.NewHandler(logger, service, cfg)
 
 	// Set up Casbin enforcer for authorization
 	modelPath := filepath.Join("internal", "casbin", "model.conf")
 	policyPath := filepath.Join("internal", "casbin", "policy.csv")
 
-	enforcer, err := casbin.NewEnforcerSafe(modelPath, policyPath)
+	enforcer, err := casbin.NewEnforcer(modelPath, policyPath)
 	if err != nil {
 		logger.Error("Error initializing Casbin enforcer", slog.String("err", err.Error()))
 		return err

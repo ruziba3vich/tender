@@ -25,9 +25,29 @@ package app
 import (
 	"log/slog"
 
+<<<<<<< HEAD
 	"github.com/casbin/casbin"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+=======
+	// _ "github.com/abdulazizax/mini-twitter/api-service/internal/items/http/app/docs"
+	// "github.com/abdulazizax/mini-twitter/api-service/internal/items/middleware"
+
+	// casbin "github.com/casbin/casbin/v2"
+	// "github.com/gin-contrib/cors"
+
+	// "github.com/abdulazizax/mini-twitter/api-service/internal/items/http/handler"
+	// "github.com/abdulazizax/mini-twitter/api-service/internal/pkg/config"
+
+	"github.com/casbin/casbin/v2"
+	"github.com/gin-contrib/cors"
+	"github.com/gin-gonic/gin"
+	"github.com/zohirovs/internal/config"
+	_ "github.com/zohirovs/internal/http/app/docs"
+	"github.com/zohirovs/internal/http/handler"
+	"github.com/zohirovs/internal/middleware"
+
+>>>>>>> b8874a32dbe7e55fed34094ffbc74b5f3dd305f1
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/zohirovs/internal/config"
@@ -65,12 +85,22 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 	router.Use(gin.Recovery())
 
 	// API ednpoints
+<<<<<<< HEAD
 
 	// User endpoints
 	users := router.Group("/")
 	{
 		users.POST("/register", handler.UserHandler.RegisterUser)
 		users.POST("/login", handler.UserHandler.LoginUser)
+=======
+	tenders := router.Group("/tenders")
+	tenders.Use(middleware.AuthzMiddleware("/tenders", enforcer, config))
+	{
+		tenders.POST("", handler.TenderHandler.CreateTender)
+		tenders.GET("", handler.TenderHandler.GetTender)
+		tenders.PUT(":id/status", handler.TenderHandler.UpdateTenderStatus)
+		tenders.DELETE("", handler.TenderHandler.DeleteTender)
+>>>>>>> b8874a32dbe7e55fed34094ffbc74b5f3dd305f1
 	}
 
 	// tenders := router.Group("/tenders")
