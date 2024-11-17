@@ -1,3 +1,11 @@
+/*
+ * @Author: javohir-a abdusamatovjavohir@gmail.com
+ * @Date: 2024-11-17 06:27:56
+ * @LastEditors: javohir-a abdusamatovjavohir@gmail.com
+ * @LastEditTime: 2024-11-17 12:58:05
+ * @FilePath: /tender/internal/storage/storage.go
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 package storage
 
 import (
@@ -28,7 +36,7 @@ func New(db *mongo.Database, cfg *config.Config, logger *slog.Logger, cache *red
 	return &Storage{
 		userRepo:         mongodb.NewUserStorage(db, cfg, logger, cache.User),
 		tenderRepo:       mongodb.NewTenderStorage(db, logger, cache.Tender),
-		bidRepo:          mongodb.NewBidStorage(db, logger, cache.Bid),
+		bidRepo:          mongodb.NewBidStorage(db, logger),
 		notificationRepo: mongodb.NewNotificationStorage(db, logger, cache.Notification),
 	}
 }

@@ -2,7 +2,7 @@
  * @Author: javohir-a abdusamatovjavohir@gmail.com
  * @Date: 2024-11-17 00:47:41
  * @LastEditors: javohir-a abdusamatovjavohir@gmail.com
- * @LastEditTime: 2024-11-17 04:24:18
+ * @LastEditTime: 2024-11-17 13:21:56
  * @FilePath: /tender/internal/http/handler/handler.go
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -28,7 +28,7 @@ func NewHandler(logger *slog.Logger, service *service.Service, cfg *config.Confi
 	wsManager := websocket.NewManager()
 	return &Handler{
 		UserHandler:         NewUserHandler(logger, service.User),
-		BidHandler:          NewBidHandler(logger, service.Bid, wsManager),
+		BidHandler:          NewBidHandler(logger, service.Bid, cfg),
 		NotificationHandler: NewNotificationHandler(logger, service.Notification),
 		TenderHandler:       NewTenderHandler(logger, service.Tender, cfg),
 		WsManager:           wsManager,

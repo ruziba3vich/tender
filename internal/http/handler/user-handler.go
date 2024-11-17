@@ -24,16 +24,17 @@ func NewUserHandler(logger *slog.Logger, user *service.UserService) *UserHandler
 	}
 }
 
-// @Summary Register a new user
-// @Description Register a new user with the provided details
-// @Tags users
-// @Accept json
-// @Produce json
-// @Param user body models.RegisterUser true "User registration details"
-// @Success 201 {object} models.User "Successfully registered user"
-// @Failure 400 {object} gin.H "Invalid request"
-// @Failure 500 {object} gin.H "Internal server error"
-// @Router /register [post]
+// RegisterUser godoc
+// @Summary      Register a new user
+// @Description  Register a new user with the provided details
+// @Tags         users
+// @Accept       json
+// @Produce      json
+// @Param        user body     models.RegisterUser true "User registration details"
+// @Success      201 {object} gin.H               "Successfully registered user"
+// @Failure      400 {object} gin.H               "Invalid request"
+// @Failure      500 {object} gin.H               "Internal server error"
+// @Router       /register [post]
 func (h *UserHandler) RegisterUser(c *gin.Context) {
 	h.logger.Info("Register user")
 
@@ -79,16 +80,17 @@ func (h *UserHandler) RegisterUser(c *gin.Context) {
 	h.logger.Info("User registered successfully", "email", user.Email)
 }
 
-// @Summary Login user
-// @Description Authenticate user and return JWT token
-// @Tags users
-// @Accept json
-// @Produce json
-// @Param user body models.RegisterUser true "User login credentials"
-// @Success 200 {object} gin.H "Successfully logged in with token"
-// @Failure 400 {object} gin.H "Invalid request"
-// @Failure 500 {object} gin.H "Internal server error"
-// @Router /login [post]
+// LoginUser godoc
+// @Summary      Login user
+// @Description  Authenticate user and return JWT token
+// @Tags         users
+// @Accept       json
+// @Produce      json
+// @Param        user body     models.LoginRequest true "User login credentials"
+// @Success      200 {object} gin.H               "Successfully logged in with token"
+// @Failure      400 {object} gin.H               "Invalid request"
+// @Failure      500 {object} gin.H               "Internal server error"
+// @Router       /login [post]
 func (h *UserHandler) LoginUser(c *gin.Context) {
 	h.logger.Info("Login user")
 
