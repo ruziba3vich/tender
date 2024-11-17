@@ -27,20 +27,20 @@ func NewUserService(userRepo repos.UserRepo, logger *slog.Logger) *UserService {
 
 // 1
 func (s *UserService) RegisterUser(ctx context.Context, user *models.RegisterUser) (string, error) {
-	_, err := s.userRepo.GetUserByEmail(ctx, user.Email)
-	if err == nil {
-		return "", fmt.Errorf("user with this email already exists")
-	}
+	// _, err := s.userRepo.GetUserByEmail(ctx, user.Email)
+	// if err == nil {
+	// 	return "", fmt.Errorf("user with this email already exists")
+	// }
 
-	isValid := s.isEmailExists(user.Email)
-	if !isValid {
-		return "", fmt.Errorf("invalid email format")
-	}
+	// isValid := s.isEmailExists(user.Email)
+	// if !isValid {
+	// 	return "", fmt.Errorf("invalid email format")
+	// }
 
-	isValid = s.isValidPassword(user.Password)
-	if !isValid {
-		return "", fmt.Errorf("invalid password format")
-	}
+	// isValid = s.isValidPassword(user.Password)
+	// if !isValid {
+	// 	return "", fmt.Errorf("invalid password format")
+	// }
 
 	new_user := models.User{
 		Username: user.Username,

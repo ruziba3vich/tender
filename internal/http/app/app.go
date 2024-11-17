@@ -25,24 +25,13 @@ package app
 import (
 	"log/slog"
 
-	// _ "github.com/abdulazizax/mini-twitter/api-service/internal/items/http/app/docs"
-	// "github.com/abdulazizax/mini-twitter/api-service/internal/items/middleware"
-
-	// casbin "github.com/casbin/casbin/v2"
-	// "github.com/gin-contrib/cors"
-
-	// "github.com/abdulazizax/mini-twitter/api-service/internal/items/http/handler"
-	// "github.com/abdulazizax/mini-twitter/api-service/internal/pkg/config"
-
 	"github.com/casbin/casbin"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"github.com/zohirovs/internal/config"
-	_ "github.com/zohirovs/internal/http/app/docs"
-	"github.com/zohirovs/internal/http/handler"
-
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
+	"github.com/zohirovs/internal/config"
+	"github.com/zohirovs/internal/http/handler"
 )
 
 // Run initializes and starts the HTTP server for the MiniTwitter API.
@@ -76,13 +65,21 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 	router.Use(gin.Recovery())
 
 	// API ednpoints
-	tenders := router.Group("/tenders")
+
+	// User endpoints
+	users := router.Group("/")
 	{
-		tenders.POST("", handler.TenderHandler.CreateTender)
-		tenders.GET("/:id", handler.TenderHandler.GetTender)
-		tenders.PUT("", handler.TenderHandler.UpdateTender)
-		tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
+		users.POST("/register", handler.UserHandler.RegisterUser)
+		users.POST("/login", handler.UserHandler.LoginUser)
 	}
+
+	// tenders := router.Group("/tenders")
+	// {
+	// 	tenders.POST("", handler.TenderHandler.CreateTender)
+	// 	tenders.GET("/:id", handler.TenderHandler.GetTender)
+	// 	tenders.PUT("", handler.TenderHandler.UpdateTender)
+	// 	tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
+	// }
 	// Start the server
 	return router.Run(config.Server.Port)
 }

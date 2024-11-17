@@ -1,6 +1,1021 @@
-{"time":"2024-11-17T01:28:00.853645673+05:00","level":"ERROR","msg":"Error while connecting to MongoDB","err":"server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb:27017, Type: Unknown, Last error: dial tcp: lookup mongodb on 127.0.0.53:53: server misbehaving }, ] }"}
-{"time":"2024-11-17T01:46:58.34706803+05:00","level":"ERROR","msg":"Error while connecting to MongoDB","err":"server selection error: context deadline exceeded, current topology: { Type: Unknown, Servers: [{ Addr: mongodb:27017, Type: Unknown, Last error: dial tcp: lookup mongodb on 127.0.0.53:53: server misbehaving }, ] }"}
-{"time":"2024-11-17T01:50:28.36366652+05:00","level":"ERROR","msg":"Error while connecting to MongoDB","err":"connection() error occurred during connection handshake: auth error: sasl conversation error: unable to authenticate using mechanism \"SCRAM-SHA-1\": (AuthenticationFailed) Authentication failed."}
-{"time":"2024-11-17T01:51:19.195377181+05:00","level":"ERROR","msg":"Error while connecting to MongoDB","err":"connection() error occurred during connection handshake: auth error: sasl conversation error: unable to authenticate using mechanism \"SCRAM-SHA-1\": (AuthenticationFailed) Authentication failed."}
-{"time":"2024-11-17T01:55:39.303985686+05:00","level":"ERROR","msg":"Error while connecting to MongoDB","err":"connection() error occurred during connection handshake: auth error: sasl conversation error: unable to authenticate using mechanism \"SCRAM-SHA-1\": (AuthenticationFailed) Authentication failed."}
-{"time":"2024-11-17T01:55:53.928571106+05:00","level":"ERROR","msg":"Error while connecting to MongoDB","err":"connection() error occurred during connection handshake: auth error: sasl conversation error: unable to authenticate using mechanism \"SCRAM-SHA-1\": (AuthenticationFailed) Authentication failed."}
+{"time":"2024-11-17T05:53:12.337886538+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T05:53:12.338042863+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T05:53:12.38559985+05:00","level":"ERROR","msg":"failed to insert user","error":"(IllegalOperation) Transaction numbers are only allowed on a replica set member or mongos"}
+{"time":"2024-11-17T05:53:12.38579062+05:00","level":"ERROR","msg":"failed to register user","error":"failed to register user: (IllegalOperation) Transaction numbers are only allowed on a replica set member or mongos"}
+{"time":"2024-11-17T05:55:01.403505124+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T05:55:01.403621497+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T05:57:07.840431038+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T05:57:07.840555591+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T05:59:41.543327014+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T05:59:41.543468651+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T06:00:55.290730622+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:00:55.290838838+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T06:02:37.209722322+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:02:37.209843157+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T06:03:55.793170419+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:03:55.793287062+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T06:04:31.70054581+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:04:31.700654106+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T06:04:57.392693926+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:04:57.392816013+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T06:05:20.468478473+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:05:20.468603284+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T06:05:48.955355751+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:05:48.955523954+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T06:06:59.409221813+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:06:59.409356181+05:00","level":"INFO","msg":"starting user registration","email":"your.email@example.com","username":"yourUsername"}
+{"time":"2024-11-17T06:06:59.4584356+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941b35277927dd864c9d9"}
+{"time":"2024-11-17T06:06:59.458472054+05:00","level":"INFO","msg":"User registered successfully","email":"your.email@example.com"}
+{"time":"2024-11-17T06:07:35.918073541+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:35.918189841+05:00","level":"INFO","msg":"starting user registration","email":"Julia31@yahoo.com","username":"Julia31@yahoo.com"}
+{"time":"2024-11-17T06:07:35.968119367+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d791a22195fb934407"}
+{"time":"2024-11-17T06:07:35.96815514+05:00","level":"INFO","msg":"User registered successfully","email":"Julia31@yahoo.com"}
+{"time":"2024-11-17T06:07:35.983550344+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:35.983616062+05:00","level":"INFO","msg":"starting user registration","email":"","username":""}
+{"time":"2024-11-17T06:07:36.034807881+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d891a22195fb934408"}
+{"time":"2024-11-17T06:07:36.034851302+05:00","level":"INFO","msg":"User registered successfully","email":""}
+{"time":"2024-11-17T06:07:36.038945085+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:36.038999983+05:00","level":"INFO","msg":"starting user registration","email":"Abe.Lind47@hotmail.com","username":"Abe.Lind47@hotmail.com"}
+{"time":"2024-11-17T06:07:36.088091764+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d891a22195fb934409"}
+{"time":"2024-11-17T06:07:36.088127568+05:00","level":"INFO","msg":"User registered successfully","email":"Abe.Lind47@hotmail.com"}
+{"time":"2024-11-17T06:07:36.090867312+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:36.090905526+05:00","level":"INFO","msg":"starting user registration","email":"Julia31@yahoo.com","username":"Julia31@yahoo.com"}
+{"time":"2024-11-17T06:07:36.140916644+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d891a22195fb93440a"}
+{"time":"2024-11-17T06:07:36.140958861+05:00","level":"INFO","msg":"User registered successfully","email":"Julia31@yahoo.com"}
+{"time":"2024-11-17T06:07:36.143971524+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:36.144013477+05:00","level":"INFO","msg":"starting user registration","email":"invalid-email","username":"testUser"}
+{"time":"2024-11-17T06:07:36.193166961+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d891a22195fb93440b"}
+{"time":"2024-11-17T06:07:36.19319768+05:00","level":"INFO","msg":"User registered successfully","email":"invalid-email"}
+{"time":"2024-11-17T06:07:36.195702644+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:07:36.195755474+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:07:36.195762665+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:07:36.195902807+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:07:36.195991472+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:07:36.198758112+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:07:36.248728624+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:07:36.248779756+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:07:36.251763798+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:07:36.251802517+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:07:36.251809947+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:07:36.251963799+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:07:36.303236243+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:07:36.303277847+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:07:36.306061066+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:07:36.30610462+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:07:36.306109877+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:07:36.306248442+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:07:36.355358258+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:07:36.355396639+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:07:36.358228506+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:07:36.358270426+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:07:36.358277255+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:07:36.358447292+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:07:36.411931032+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:07:36.41197358+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:07:36.719483187+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:36.719540944+05:00","level":"INFO","msg":"starting user registration","email":"Amelia_Kautzer62@hotmail.com","username":"Amelia_Kautzer62@hotmail.com"}
+{"time":"2024-11-17T06:07:36.77566368+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d891a22195fb93440c"}
+{"time":"2024-11-17T06:07:36.775704957+05:00","level":"INFO","msg":"User registered successfully","email":"Amelia_Kautzer62@hotmail.com"}
+{"time":"2024-11-17T06:07:36.787644773+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:36.787734965+05:00","level":"INFO","msg":"starting user registration","email":"","username":""}
+{"time":"2024-11-17T06:07:36.839101274+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d891a22195fb93440d"}
+{"time":"2024-11-17T06:07:36.839136585+05:00","level":"INFO","msg":"User registered successfully","email":""}
+{"time":"2024-11-17T06:07:36.84315738+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:36.843201645+05:00","level":"INFO","msg":"starting user registration","email":"Amelia_Kautzer62@hotmail.com","username":"Amelia_Kautzer62@hotmail.com"}
+{"time":"2024-11-17T06:07:36.8966484+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d891a22195fb93440e"}
+{"time":"2024-11-17T06:07:36.896684627+05:00","level":"INFO","msg":"User registered successfully","email":"Amelia_Kautzer62@hotmail.com"}
+{"time":"2024-11-17T06:07:36.899360877+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:36.899401097+05:00","level":"INFO","msg":"starting user registration","email":"invalid-email","username":"testUser"}
+{"time":"2024-11-17T06:07:36.953762639+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d891a22195fb93440f"}
+{"time":"2024-11-17T06:07:36.95380766+05:00","level":"INFO","msg":"User registered successfully","email":"invalid-email"}
+{"time":"2024-11-17T06:07:36.959154395+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:07:36.95923434+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:07:36.9592458+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:07:36.960116272+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:07:36.960274807+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:07:36.96105543+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:07:37.016653053+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:07:37.01668702+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:07:37.019417368+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:07:37.019463954+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:07:37.01947243+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:07:37.019629814+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:07:37.07077252+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:07:37.070810308+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:07:37.073370037+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:07:37.073414207+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:07:37.073422803+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:07:37.073585045+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:07:37.123130119+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:07:37.123171031+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:07:37.126030226+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:07:37.126076961+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:07:37.126083335+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:07:37.126245612+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:07:37.181176511+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:07:37.181214485+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:07:37.475967116+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:37.476016984+05:00","level":"INFO","msg":"starting user registration","email":"Carolanne_Reilly58@yahoo.com","username":"Carolanne_Reilly58@yahoo.com"}
+{"time":"2024-11-17T06:07:37.532818895+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d991a22195fb934410"}
+{"time":"2024-11-17T06:07:37.532852127+05:00","level":"INFO","msg":"User registered successfully","email":"Carolanne_Reilly58@yahoo.com"}
+{"time":"2024-11-17T06:07:37.870889847+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:07:37.87095928+05:00","level":"INFO","msg":"starting user registration","email":"Ayden.Schulist@yahoo.com","username":"Ayden.Schulist@yahoo.com"}
+{"time":"2024-11-17T06:07:37.923591753+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673941d991a22195fb934411"}
+{"time":"2024-11-17T06:07:37.923624625+05:00","level":"INFO","msg":"User registered successfully","email":"Ayden.Schulist@yahoo.com"}
+{"time":"2024-11-17T06:10:06.939699277+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:06.939883725+05:00","level":"INFO","msg":"starting user registration","email":"Lura_Bashirian85@yahoo.com","username":"Lura_Bashirian85@yahoo.com"}
+{"time":"2024-11-17T06:10:07.011874485+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739426f3845c17310153ed4"}
+{"time":"2024-11-17T06:10:07.011937034+05:00","level":"INFO","msg":"User registered successfully","email":"Lura_Bashirian85@yahoo.com"}
+{"time":"2024-11-17T06:10:07.022196287+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:07.022269418+05:00","level":"INFO","msg":"starting user registration","email":"","username":""}
+{"time":"2024-11-17T06:10:07.094508246+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739426f3845c17310153ed5"}
+{"time":"2024-11-17T06:10:07.094549513+05:00","level":"INFO","msg":"User registered successfully","email":""}
+{"time":"2024-11-17T06:10:07.111141342+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:07.111203921+05:00","level":"INFO","msg":"starting user registration","email":"Nathanial_Hyatt@gmail.com","username":"Nathanial_Hyatt@gmail.com"}
+{"time":"2024-11-17T06:10:07.182193375+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739426f3845c17310153ed6"}
+{"time":"2024-11-17T06:10:07.182287768+05:00","level":"INFO","msg":"User registered successfully","email":"Nathanial_Hyatt@gmail.com"}
+{"time":"2024-11-17T06:10:07.186926986+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:07.187099856+05:00","level":"INFO","msg":"starting user registration","email":"Lura_Bashirian85@yahoo.com","username":"Lura_Bashirian85@yahoo.com"}
+{"time":"2024-11-17T06:10:07.258783024+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739426f3845c17310153ed7"}
+{"time":"2024-11-17T06:10:07.258824313+05:00","level":"INFO","msg":"User registered successfully","email":"Lura_Bashirian85@yahoo.com"}
+{"time":"2024-11-17T06:10:07.261919366+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:07.261968211+05:00","level":"INFO","msg":"starting user registration","email":"invalid-email","username":"testUser"}
+{"time":"2024-11-17T06:10:07.332347834+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739426f3845c17310153ed8"}
+{"time":"2024-11-17T06:10:07.332387231+05:00","level":"INFO","msg":"User registered successfully","email":"invalid-email"}
+{"time":"2024-11-17T06:10:07.335582875+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:10:07.335634328+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:10:07.335641885+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:10:07.335819267+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:10:07.335904267+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:10:07.336462161+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:10:07.406472551+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:10:07.406516794+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:10:07.409985037+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:10:07.410037182+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:10:07.410046465+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:10:07.410232119+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:10:07.48159544+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:10:07.481640169+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:10:07.48499323+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:10:07.48503739+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:10:07.485045357+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:10:07.485226694+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:10:07.55736493+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:10:07.557408078+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:10:07.561657044+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:10:07.561721408+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:10:07.561732045+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:10:07.562002954+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:10:07.642479656+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:10:07.642530083+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:10:08.034709245+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:08.034778646+05:00","level":"INFO","msg":"starting user registration","email":"Daren_Considine88@hotmail.com","username":"Daren_Considine88@hotmail.com"}
+{"time":"2024-11-17T06:10:08.106800427+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673942703845c17310153ed9"}
+{"time":"2024-11-17T06:10:08.106851221+05:00","level":"INFO","msg":"User registered successfully","email":"Daren_Considine88@hotmail.com"}
+{"time":"2024-11-17T06:10:08.112992221+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:08.113059969+05:00","level":"INFO","msg":"starting user registration","email":"","username":""}
+{"time":"2024-11-17T06:10:08.18296918+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673942703845c17310153eda"}
+{"time":"2024-11-17T06:10:08.18300935+05:00","level":"INFO","msg":"User registered successfully","email":""}
+{"time":"2024-11-17T06:10:08.199815206+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:08.199879763+05:00","level":"INFO","msg":"starting user registration","email":"Daren_Considine88@hotmail.com","username":"Daren_Considine88@hotmail.com"}
+{"time":"2024-11-17T06:10:08.269970669+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673942703845c17310153edb"}
+{"time":"2024-11-17T06:10:08.270005505+05:00","level":"INFO","msg":"User registered successfully","email":"Daren_Considine88@hotmail.com"}
+{"time":"2024-11-17T06:10:08.273498803+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:08.27355774+05:00","level":"INFO","msg":"starting user registration","email":"invalid-email","username":"testUser"}
+{"time":"2024-11-17T06:10:08.345340399+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673942703845c17310153edc"}
+{"time":"2024-11-17T06:10:08.34538725+05:00","level":"INFO","msg":"User registered successfully","email":"invalid-email"}
+{"time":"2024-11-17T06:10:08.348859437+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:10:08.34890129+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:10:08.348909751+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:10:08.34905838+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:10:08.349164036+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:10:08.349677365+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:10:08.420575122+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:10:08.420617588+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:10:08.423805813+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:10:08.423852399+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:10:08.423860939+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:10:08.424021521+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:10:08.493750099+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:10:08.493792691+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:10:08.497359953+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:10:08.497412667+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:10:08.497422558+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:10:08.49758499+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:10:08.567186549+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:10:08.567232534+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:10:08.571160368+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:10:08.571224709+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:10:08.571236106+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:10:08.571443336+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:10:08.642666071+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:10:08.642721412+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:10:09.044327255+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:09.044437561+05:00","level":"INFO","msg":"starting user registration","email":"Darius52@hotmail.com","username":"Darius52@hotmail.com"}
+{"time":"2024-11-17T06:10:09.118195629+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673942713845c17310153edd"}
+{"time":"2024-11-17T06:10:09.118256608+05:00","level":"INFO","msg":"User registered successfully","email":"Darius52@hotmail.com"}
+{"time":"2024-11-17T06:10:09.125467909+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:10:09.125523848+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:10:09.125534485+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:10:09.125698817+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:10:09.12583128+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:10:09.126432455+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:10:09.200624969+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:10:09.200667753+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:10:09.62003598+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:10:09.620089344+05:00","level":"INFO","msg":"starting user registration","email":"Jamar_Wuckert16@hotmail.com","username":"Jamar_Wuckert16@hotmail.com"}
+{"time":"2024-11-17T06:10:09.688407807+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673942713845c17310153ede"}
+{"time":"2024-11-17T06:10:09.688453124+05:00","level":"INFO","msg":"User registered successfully","email":"Jamar_Wuckert16@hotmail.com"}
+{"time":"2024-11-17T06:10:09.69329751+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:10:09.693347326+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:10:09.693356776+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:10:09.693529797+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:10:09.693623308+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:10:09.694264797+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:10:09.760772041+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:10:09.760808185+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:19.024233971+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:19.024408083+05:00","level":"INFO","msg":"fetching user by email","email":"King_Lind@yahoo.com"}
+{"time":"2024-11-17T06:11:19.024723034+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:19.024897595+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:19.025618582+05:00","level":"WARN","msg":"user not found","email":"King_Lind@yahoo.com"}
+{"time":"2024-11-17T06:11:19.029543207+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:19.029627796+05:00","level":"INFO","msg":"fetching user by email","email":"Mario_Welch@gmail.com"}
+{"time":"2024-11-17T06:11:19.029833272+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:19.02996711+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:19.030571508+05:00","level":"WARN","msg":"user not found","email":"Mario_Welch@gmail.com"}
+{"time":"2024-11-17T06:11:19.036438671+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:19.036518587+05:00","level":"INFO","msg":"fetching user by email","email":"Deborah.Mueller14@hotmail.com"}
+{"time":"2024-11-17T06:11:19.036859298+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:19.037022044+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:19.037667003+05:00","level":"WARN","msg":"user not found","email":"Deborah.Mueller14@hotmail.com"}
+{"time":"2024-11-17T06:11:19.066065896+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:19.066168423+05:00","level":"INFO","msg":"fetching user by email","email":"Glennie_Murray86@gmail.com"}
+{"time":"2024-11-17T06:11:19.066571369+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:19.066772435+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:19.067658326+05:00","level":"WARN","msg":"user not found","email":"Glennie_Murray86@gmail.com"}
+{"time":"2024-11-17T06:11:19.159738792+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"gmail-smtp-in.l.google.com."}
+{"time":"2024-11-17T06:11:19.159738976+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"gmail-smtp-in.l.google.com."}
+{"time":"2024-11-17T06:11:19.628187719+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"hotmail-com.olc.protection.outlook.com."}
+{"time":"2024-11-17T06:11:19.651434251+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:19.651517922+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:19.651720295+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:19.651848741+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:11:19.655556346+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:19.655597637+05:00","level":"INFO","msg":"fetching user by email","email":"Deborah.Mueller14@hotmail.com"}
+{"time":"2024-11-17T06:11:19.655739025+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:19.655865313+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:19.656354014+05:00","level":"WARN","msg":"user not found","email":"Deborah.Mueller14@hotmail.com"}
+{"time":"2024-11-17T06:11:19.748784519+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta5.am0.yahoodns.net."}
+{"time":"2024-11-17T06:11:19.775402765+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:19.775474548+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:19.775711674+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:19.775829721+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:11:19.780163529+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:19.78023665+05:00","level":"INFO","msg":"fetching user by email","email":"Eldred.Hirthe62@yahoo.com"}
+{"time":"2024-11-17T06:11:19.780481704+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:19.780631496+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:19.781312651+05:00","level":"WARN","msg":"user not found","email":"Eldred.Hirthe62@yahoo.com"}
+{"time":"2024-11-17T06:11:19.981927961+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"hotmail-com.olc.protection.outlook.com."}
+{"time":"2024-11-17T06:11:19.986460074+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:19.986511041+05:00","level":"INFO","msg":"fetching user by email","email":"invalid-email"}
+{"time":"2024-11-17T06:11:19.986658183+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:19.986781542+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:19.987436698+05:00","level":"INFO","msg":"successfully fetched user","email":"invalid-email"}
+{"time":"2024-11-17T06:11:19.987457376+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:11:19.990655302+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:19.990724906+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:19.99073583+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:19.990908137+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:19.991078436+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:19.991664507+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:11:20.06854598+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:20.068601001+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:20.072544202+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:20.072610499+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:20.07261946+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:20.072847016+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:20.150341914+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:20.1503868+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:20.153738689+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:20.153786464+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:20.153795963+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:20.153976413+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:20.230093275+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:20.230137232+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:20.233268903+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:20.233315488+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:20.23332514+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:20.233503545+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:20.289069249+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta6.am0.yahoodns.net."}
+{"time":"2024-11-17T06:11:20.294317446+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:20.294378774+05:00","level":"INFO","msg":"fetching user by email","email":"King_Lind@yahoo.com"}
+{"time":"2024-11-17T06:11:20.294538659+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:20.294659478+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:20.295114523+05:00","level":"WARN","msg":"user not found","email":"King_Lind@yahoo.com"}
+{"time":"2024-11-17T06:11:20.312016007+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:20.312074099+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:20.594218147+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta6.am0.yahoodns.net."}
+{"time":"2024-11-17T06:11:20.59846143+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:20.598524262+05:00","level":"INFO","msg":"fetching user by email","email":"invalid-email"}
+{"time":"2024-11-17T06:11:20.598740539+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:20.598922811+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:20.599487217+05:00","level":"INFO","msg":"successfully fetched user","email":"invalid-email"}
+{"time":"2024-11-17T06:11:20.599509918+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:11:20.60321637+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:20.603276539+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:20.603288106+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:20.60347856+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:20.60362609+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:20.604202059+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:11:20.681315268+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:20.681376137+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:20.684974106+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:20.685050269+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:20.685060822+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:20.685261113+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:20.762641686+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:20.762682095+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:20.765612164+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:20.765654405+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:20.765662905+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:20.765821998+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:20.843057978+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:20.843101718+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:20.846443924+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:20.846492344+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:20.846500951+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:20.846704794+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:20.923586755+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:20.923639172+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:28.526740169+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:28.526824728+05:00","level":"INFO","msg":"fetching user by email","email":"Mike_Raynor88@yahoo.com"}
+{"time":"2024-11-17T06:11:28.527127714+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:28.527325377+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:28.528069185+05:00","level":"WARN","msg":"user not found","email":"Mike_Raynor88@yahoo.com"}
+{"time":"2024-11-17T06:11:28.542704144+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:28.543035065+05:00","level":"INFO","msg":"fetching user by email","email":"Alana63@yahoo.com"}
+{"time":"2024-11-17T06:11:28.543377287+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:28.543682009+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:28.544496701+05:00","level":"WARN","msg":"user not found","email":"Alana63@yahoo.com"}
+{"time":"2024-11-17T06:11:28.592387647+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:28.593164382+05:00","level":"INFO","msg":"fetching user by email","email":"Queen31@hotmail.com"}
+{"time":"2024-11-17T06:11:28.593831256+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:28.594375938+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:28.595324593+05:00","level":"WARN","msg":"user not found","email":"Queen31@hotmail.com"}
+{"time":"2024-11-17T06:11:28.616233991+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:28.616318299+05:00","level":"INFO","msg":"fetching user by email","email":"Israel_Okuneva25@hotmail.com"}
+{"time":"2024-11-17T06:11:28.616807958+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:28.617804971+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:28.618659996+05:00","level":"WARN","msg":"user not found","email":"Israel_Okuneva25@hotmail.com"}
+{"time":"2024-11-17T06:11:28.843636469+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta6.am0.yahoodns.net."}
+{"time":"2024-11-17T06:11:28.86474141+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"hotmail-com.olc.protection.outlook.com."}
+{"time":"2024-11-17T06:11:28.865005244+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"hotmail-com.olc.protection.outlook.com."}
+{"time":"2024-11-17T06:11:28.869477309+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:28.869556015+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:28.869784001+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:28.869914452+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:11:28.874748646+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:28.87481344+05:00","level":"INFO","msg":"fetching user by email","email":"Percival_Torphy47@gmail.com"}
+{"time":"2024-11-17T06:11:28.875051193+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:28.875240274+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:28.875754064+05:00","level":"WARN","msg":"user not found","email":"Percival_Torphy47@gmail.com"}
+{"time":"2024-11-17T06:11:28.890268073+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:28.890362022+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:28.890599724+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:28.890724085+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:11:28.897521474+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:28.897611691+05:00","level":"INFO","msg":"fetching user by email","email":"Queen31@hotmail.com"}
+{"time":"2024-11-17T06:11:28.897873431+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:28.898119912+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:28.8989448+05:00","level":"WARN","msg":"user not found","email":"Queen31@hotmail.com"}
+{"time":"2024-11-17T06:11:28.963633851+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta7.am0.yahoodns.net."}
+{"time":"2024-11-17T06:11:28.969651966+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"gmail-smtp-in.l.google.com."}
+{"time":"2024-11-17T06:11:28.975433168+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:28.975519002+05:00","level":"INFO","msg":"fetching user by email","email":"Alana63@yahoo.com"}
+{"time":"2024-11-17T06:11:28.975834735+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:28.977252248+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:28.97813322+05:00","level":"WARN","msg":"user not found","email":"Alana63@yahoo.com"}
+{"time":"2024-11-17T06:11:29.05035701+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"hotmail-com.olc.protection.outlook.com."}
+{"time":"2024-11-17T06:11:29.05938056+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:29.059719849+05:00","level":"INFO","msg":"fetching user by email","email":"invalid-email"}
+{"time":"2024-11-17T06:11:29.060456384+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:29.060610135+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:29.061653069+05:00","level":"INFO","msg":"successfully fetched user","email":"invalid-email"}
+{"time":"2024-11-17T06:11:29.061673463+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:11:29.072161185+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:29.072272126+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:29.07228537+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:29.073799622+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:29.073958145+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:29.074783657+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:11:29.154732016+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:29.154772512+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:29.158027152+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:29.158103943+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:29.158116677+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:29.158391254+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:29.234871749+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:29.234912227+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:29.238066409+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:29.238105298+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:29.238112377+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:29.238286839+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:29.268810088+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta6.am0.yahoodns.net."}
+{"time":"2024-11-17T06:11:29.27319498+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:11:29.273263268+05:00","level":"INFO","msg":"fetching user by email","email":"invalid-email"}
+{"time":"2024-11-17T06:11:29.273461407+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:29.273621136+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:29.274226017+05:00","level":"INFO","msg":"successfully fetched user","email":"invalid-email"}
+{"time":"2024-11-17T06:11:29.274243577+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:11:29.277558395+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:29.27761471+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:29.277624438+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:29.277798279+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:29.277905463+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:11:29.278524237+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:11:29.315058274+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:29.315113762+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:29.318341593+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:29.318389808+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:29.318399754+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:29.318574638+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:29.355783353+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:29.355839982+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:29.359140315+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:29.359206346+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:29.359218295+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:29.359437621+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:29.396376051+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:29.396493555+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:29.459475473+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:29.459763426+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:29.465132604+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:29.465212897+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:29.465224171+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:29.46547635+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:29.545323586+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:29.545361894+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:11:29.548990726+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:11:29.549039857+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:11:29.549049003+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:11:29.549235943+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:11:29.626408986+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:11:29.62646036+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:04.988366558+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:04.988458207+05:00","level":"INFO","msg":"fetching user by email","email":"Cordia_Crist20@gmail.com"}
+{"time":"2024-11-17T06:12:04.988679636+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:04.988810116+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:04.989400817+05:00","level":"WARN","msg":"user not found","email":"Cordia_Crist20@gmail.com"}
+{"time":"2024-11-17T06:12:05.018249251+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:05.018330939+05:00","level":"INFO","msg":"fetching user by email","email":"Hiram_Von@yahoo.com"}
+{"time":"2024-11-17T06:12:05.018513718+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.018625464+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:05.01883688+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:05.018874262+05:00","level":"INFO","msg":"fetching user by email","email":"Mabel_White75@yahoo.com"}
+{"time":"2024-11-17T06:12:05.018990824+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.019109176+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:05.019227752+05:00","level":"WARN","msg":"user not found","email":"Hiram_Von@yahoo.com"}
+{"time":"2024-11-17T06:12:05.01959866+05:00","level":"WARN","msg":"user not found","email":"Mabel_White75@yahoo.com"}
+{"time":"2024-11-17T06:12:05.024973412+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:05.025475685+05:00","level":"INFO","msg":"fetching user by email","email":"Caleb91@yahoo.com"}
+{"time":"2024-11-17T06:12:05.025776113+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.025979641+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:05.026626953+05:00","level":"WARN","msg":"user not found","email":"Caleb91@yahoo.com"}
+{"time":"2024-11-17T06:12:05.084434863+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"gmail-smtp-in.l.google.com."}
+{"time":"2024-11-17T06:12:05.354144924+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta7.am0.yahoodns.net."}
+{"time":"2024-11-17T06:12:05.354163924+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta7.am0.yahoodns.net."}
+{"time":"2024-11-17T06:12:05.35598234+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta7.am0.yahoodns.net."}
+{"time":"2024-11-17T06:12:05.387379521+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:05.387549698+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:05.38785014+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.387999996+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:12:05.393982931+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:05.394067302+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:05.394486446+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.394763161+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:05.394867538+05:00","level":"INFO","msg":"fetching user by email","email":"Caleb91@yahoo.com"}
+{"time":"2024-11-17T06:12:05.395061985+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:12:05.395290862+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.396025239+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:05.397009564+05:00","level":"WARN","msg":"user not found","email":"Caleb91@yahoo.com"}
+{"time":"2024-11-17T06:12:05.401555042+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:05.401620424+05:00","level":"INFO","msg":"fetching user by email","email":"Giles_Yost@gmail.com"}
+{"time":"2024-11-17T06:12:05.401832848+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.402392637+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:05.402963388+05:00","level":"WARN","msg":"user not found","email":"Giles_Yost@gmail.com"}
+{"time":"2024-11-17T06:12:05.546545754+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"gmail-smtp-in.l.google.com."}
+{"time":"2024-11-17T06:12:05.551932507+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:05.551992699+05:00","level":"INFO","msg":"fetching user by email","email":"Hiram_Von@yahoo.com"}
+{"time":"2024-11-17T06:12:05.552156555+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.552256131+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:05.552711013+05:00","level":"WARN","msg":"user not found","email":"Hiram_Von@yahoo.com"}
+{"time":"2024-11-17T06:12:05.736042284+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta6.am0.yahoodns.net."}
+{"time":"2024-11-17T06:12:05.740885173+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:05.740949755+05:00","level":"INFO","msg":"fetching user by email","email":"invalid-email"}
+{"time":"2024-11-17T06:12:05.741120567+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.741241989+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:05.741695797+05:00","level":"WARN","msg":"user not found","email":"invalid-email"}
+{"time":"2024-11-17T06:12:05.741721877+05:00","level":"INFO","msg":"Invalid email format"}
+{"time":"2024-11-17T06:12:05.741727461+05:00","level":"ERROR","msg":"failed to register user","error":"invalid email format"}
+{"time":"2024-11-17T06:12:05.745151361+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:05.74521758+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:05.745227709+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:05.74542014+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.829751521+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:05.829795836+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:05.833451362+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:05.833511387+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:05.83352257+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:05.833743361+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.855064606+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta6.am0.yahoodns.net."}
+{"time":"2024-11-17T06:12:05.8602347+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:05.86031055+05:00","level":"INFO","msg":"fetching user by email","email":"invalid-email"}
+{"time":"2024-11-17T06:12:05.860528428+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.8606813+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:05.861307625+05:00","level":"WARN","msg":"user not found","email":"invalid-email"}
+{"time":"2024-11-17T06:12:05.861360451+05:00","level":"INFO","msg":"Invalid email format"}
+{"time":"2024-11-17T06:12:05.861369893+05:00","level":"ERROR","msg":"failed to register user","error":"invalid email format"}
+{"time":"2024-11-17T06:12:05.865502123+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:05.865574741+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:05.865586325+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:05.86596965+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.914448416+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:05.914490935+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:05.917727022+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:05.917775414+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:05.917783907+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:05.917995985+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.944010082+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:05.944074278+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:05.947488077+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:05.947539217+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:05.947550165+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:05.947754571+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:05.998030662+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:05.998125679+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:06.002147499+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:06.002208952+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:06.002219832+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:06.002442052+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:06.030059594+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:06.030140278+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:06.034344068+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:06.034406303+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:06.034418198+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:06.034601857+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:06.08613508+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:06.086180823+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:06.111229313+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:06.1113099+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:06.115998294+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:06.116088184+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:06.116098397+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:06.116284007+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:06.193249926+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:06.193296818+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:45.721139846+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.72133834+05:00","level":"INFO","msg":"fetching user by email","email":"Lura5@gmail.com"}
+{"time":"2024-11-17T06:12:45.724214829+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.724422564+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:45.725083318+05:00","level":"WARN","msg":"user not found","email":"Lura5@gmail.com"}
+{"time":"2024-11-17T06:12:45.736984378+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.737657915+05:00","level":"INFO","msg":"fetching user by email","email":"Rosendo_Berge@gmail.com"}
+{"time":"2024-11-17T06:12:45.738648198+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.740972295+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:45.742873365+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.74293755+05:00","level":"INFO","msg":"fetching user by email","email":"Nannie80@yahoo.com"}
+{"time":"2024-11-17T06:12:45.743382363+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.74353936+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:45.745333423+05:00","level":"WARN","msg":"user not found","email":"Rosendo_Berge@gmail.com"}
+{"time":"2024-11-17T06:12:45.745760245+05:00","level":"WARN","msg":"user not found","email":"Nannie80@yahoo.com"}
+{"time":"2024-11-17T06:12:45.791804112+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.792084845+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:45.79244266+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.792669802+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:12:45.793169214+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.79321037+05:00","level":"INFO","msg":"fetching user by email","email":"Katelin48@yahoo.com"}
+{"time":"2024-11-17T06:12:45.793364037+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.793492123+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:45.794107025+05:00","level":"WARN","msg":"user not found","email":"Katelin48@yahoo.com"}
+{"time":"2024-11-17T06:12:45.803827564+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.803903761+05:00","level":"INFO","msg":"fetching user by email","email":"Lura5@gmail.com"}
+{"time":"2024-11-17T06:12:45.804374502+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.804707503+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:45.805319082+05:00","level":"WARN","msg":"user not found","email":"Lura5@gmail.com"}
+{"time":"2024-11-17T06:12:45.821114241+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.821179966+05:00","level":"INFO","msg":"fetching user by email","email":"invalid-email"}
+{"time":"2024-11-17T06:12:45.821373246+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.82154782+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:45.822084047+05:00","level":"WARN","msg":"user not found","email":"invalid-email"}
+{"time":"2024-11-17T06:12:45.82448788+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.824811466+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:45.825161704+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.825276918+05:00","level":"ERROR","msg":"failed to register user","error":"user with this email already exists"}
+{"time":"2024-11-17T06:12:45.833207209+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.833294405+05:00","level":"INFO","msg":"fetching user by email","email":"Brennon.Murray@yahoo.com"}
+{"time":"2024-11-17T06:12:45.833540588+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:45.833684356+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:45.833698315+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:45.833587582+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.833990641+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.834304841+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:45.834969238+05:00","level":"WARN","msg":"user not found","email":"Brennon.Murray@yahoo.com"}
+{"time":"2024-11-17T06:12:45.845975604+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.846558095+05:00","level":"INFO","msg":"fetching user by email","email":"Nannie80@yahoo.com"}
+{"time":"2024-11-17T06:12:45.847151486+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.847325548+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:45.847852474+05:00","level":"WARN","msg":"user not found","email":"Nannie80@yahoo.com"}
+{"time":"2024-11-17T06:12:45.864811142+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:12:45.864987937+05:00","level":"INFO","msg":"fetching user by email","email":"invalid-email"}
+{"time":"2024-11-17T06:12:45.865376828+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.865730916+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:12:45.86712548+05:00","level":"WARN","msg":"user not found","email":"invalid-email"}
+{"time":"2024-11-17T06:12:45.873377594+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:45.873869416+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:45.873885181+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:45.874543628+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.933510584+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:45.933821663+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:45.939593536+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:45.939801454+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:45.939852585+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:45.940085826+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:45.975316948+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:45.975369075+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:45.980277263+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:45.9803458+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:45.980357166+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:45.980586281+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:46.045326718+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:46.045494476+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:46.056193828+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:46.056282236+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:46.056294387+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:46.056535013+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:46.087472223+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:46.08758174+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:46.091828151+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:46.091879085+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:46.091888852+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:46.0921058+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:46.135708266+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:46.135760715+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:46.139048661+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:46.139097215+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:46.139104986+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:46.13929044+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:46.16887171+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:46.1689189+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:46.172564698+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:12:46.172643939+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:12:46.172655301+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:12:46.172844243+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:12:46.216820113+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:46.216889866+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:12:46.250077563+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:12:46.250146487+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:19.457867664+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:19.475278245+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:19.5061925+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:19.530711075+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:19.571182594+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"gmail-smtp-in.l.google.com."}
+{"time":"2024-11-17T06:13:19.630577594+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"gmail-smtp-in.l.google.com."}
+{"time":"2024-11-17T06:13:19.664155247+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"hotmail-com.olc.protection.outlook.com."}
+{"time":"2024-11-17T06:13:19.688073906+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:19.688155724+05:00","level":"INFO","msg":"Invalid email format"}
+{"time":"2024-11-17T06:13:19.688168343+05:00","level":"ERROR","msg":"failed to register user","error":"invalid email format"}
+{"time":"2024-11-17T06:13:19.692201218+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:19.837888012+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"hotmail-com.olc.protection.outlook.com."}
+{"time":"2024-11-17T06:13:19.843208399+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:19.843272667+05:00","level":"INFO","msg":"Invalid email format"}
+{"time":"2024-11-17T06:13:19.843282262+05:00","level":"ERROR","msg":"failed to register user","error":"invalid email format"}
+{"time":"2024-11-17T06:13:19.847036488+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:19.847127346+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:19.847139838+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:19.847461139+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:19.87377471+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta5.am0.yahoodns.net."}
+{"time":"2024-11-17T06:13:19.896603261+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:19.896675273+05:00","level":"INFO","msg":"Invalid email format"}
+{"time":"2024-11-17T06:13:19.896686472+05:00","level":"ERROR","msg":"failed to register user","error":"invalid email format"}
+{"time":"2024-11-17T06:13:19.900274751+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:19.924143103+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:19.924187784+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:19.927193525+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:19.927238249+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:19.927260839+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:19.927450344+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:20.004254468+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:20.004303082+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:20.007591136+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:20.007643265+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:20.007653324+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:20.008323905+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:20.084787537+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:20.084828243+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:20.087941525+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:20.088019432+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:20.088036736+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:20.088187834+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:20.166491371+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:20.166558746+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:20.20069507+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta6.am0.yahoodns.net."}
+{"time":"2024-11-17T06:13:20.204965722+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:20.512224482+05:00","level":"INFO","msg":"Successfully connected to SMTP server","host":"mta6.am0.yahoodns.net."}
+{"time":"2024-11-17T06:13:20.516587197+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:20.516646073+05:00","level":"INFO","msg":"Invalid email format"}
+{"time":"2024-11-17T06:13:20.516656855+05:00","level":"ERROR","msg":"failed to register user","error":"invalid email format"}
+{"time":"2024-11-17T06:13:20.519369232+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:20.519430861+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:20.519441104+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:20.519683931+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:20.596190165+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:20.596278403+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:20.60335792+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:20.603489634+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:20.603498205+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:20.603675742+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:20.681335032+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:20.681385025+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:20.684594302+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:20.684656661+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:20.684665611+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:20.684841744+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:20.761104057+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:20.761157373+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:20.764782359+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:20.764836273+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:20.764846649+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:20.765028427+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:20.842056713+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:20.842099916+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:45.927925555+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:45.928859188+05:00","level":"INFO","msg":"starting user registration","email":"Brett_Dibbert17@gmail.com","username":"Brett_Dibbert17@gmail.com"}
+{"time":"2024-11-17T06:13:45.944172022+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:45.944257143+05:00","level":"INFO","msg":"starting user registration","email":"Logan.Friesen@gmail.com","username":"Logan.Friesen@gmail.com"}
+{"time":"2024-11-17T06:13:45.945039285+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:45.945092152+05:00","level":"INFO","msg":"starting user registration","email":"Mellie_Upton69@gmail.com","username":"Mellie_Upton69@gmail.com"}
+{"time":"2024-11-17T06:13:45.984094551+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:45.984487365+05:00","level":"INFO","msg":"starting user registration","email":"Felix_OConner83@yahoo.com","username":"Felix_OConner83@yahoo.com"}
+{"time":"2024-11-17T06:13:46.028586564+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac2085"}
+{"time":"2024-11-17T06:13:46.029897926+05:00","level":"INFO","msg":"User registered successfully","email":"Brett_Dibbert17@gmail.com"}
+{"time":"2024-11-17T06:13:46.050077749+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac2086"}
+{"time":"2024-11-17T06:13:46.050138561+05:00","level":"INFO","msg":"User registered successfully","email":"Logan.Friesen@gmail.com"}
+{"time":"2024-11-17T06:13:46.063059694+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:46.063407231+05:00","level":"INFO","msg":"starting user registration","email":"","username":""}
+{"time":"2024-11-17T06:13:46.071388693+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:46.071509489+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:46.07152253+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:46.072946152+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:46.073094453+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:13:46.073574074+05:00","level":"WARN","msg":"user not found","email":""}
+{"time":"2024-11-17T06:13:46.073596666+05:00","level":"ERROR","msg":"failed to get user during login","error":"user not found","email":""}
+{"time":"2024-11-17T06:13:46.073612877+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to get user: user not found"}
+{"time":"2024-11-17T06:13:46.073797637+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac2087"}
+{"time":"2024-11-17T06:13:46.073813364+05:00","level":"INFO","msg":"User registered successfully","email":"Felix_OConner83@yahoo.com"}
+{"time":"2024-11-17T06:13:46.081754163+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac2088"}
+{"time":"2024-11-17T06:13:46.081813623+05:00","level":"INFO","msg":"User registered successfully","email":"Mellie_Upton69@gmail.com"}
+{"time":"2024-11-17T06:13:46.089764252+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:46.089838644+05:00","level":"INFO","msg":"starting user registration","email":"","username":""}
+{"time":"2024-11-17T06:13:46.09493134+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:46.095088136+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:46.095101464+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:46.095356755+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:46.095516997+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:13:46.096030413+05:00","level":"WARN","msg":"user not found","email":""}
+{"time":"2024-11-17T06:13:46.096052811+05:00","level":"ERROR","msg":"failed to get user during login","error":"user not found","email":""}
+{"time":"2024-11-17T06:13:46.096131564+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to get user: user not found"}
+{"time":"2024-11-17T06:13:46.151935375+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac2089"}
+{"time":"2024-11-17T06:13:46.152067797+05:00","level":"INFO","msg":"User registered successfully","email":""}
+{"time":"2024-11-17T06:13:46.171999761+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac208a"}
+{"time":"2024-11-17T06:13:46.172069992+05:00","level":"INFO","msg":"User registered successfully","email":""}
+{"time":"2024-11-17T06:13:46.177243447+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:46.177350421+05:00","level":"INFO","msg":"starting user registration","email":"Cory93@gmail.com","username":"Cory93@gmail.com"}
+{"time":"2024-11-17T06:13:46.197204927+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:46.197388611+05:00","level":"INFO","msg":"starting user registration","email":"Felix_OConner83@yahoo.com","username":"Felix_OConner83@yahoo.com"}
+{"time":"2024-11-17T06:13:46.279783441+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac208b"}
+{"time":"2024-11-17T06:13:46.279943203+05:00","level":"INFO","msg":"User registered successfully","email":"Felix_OConner83@yahoo.com"}
+{"time":"2024-11-17T06:13:46.283935801+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac208c"}
+{"time":"2024-11-17T06:13:46.284111875+05:00","level":"INFO","msg":"User registered successfully","email":"Cory93@gmail.com"}
+{"time":"2024-11-17T06:13:46.295270687+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:46.29580946+05:00","level":"INFO","msg":"starting user registration","email":"Brett_Dibbert17@gmail.com","username":"Brett_Dibbert17@gmail.com"}
+{"time":"2024-11-17T06:13:46.296371706+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:46.297002866+05:00","level":"INFO","msg":"starting user registration","email":"invalid-email","username":"testUser"}
+{"time":"2024-11-17T06:13:46.379736614+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac208d"}
+{"time":"2024-11-17T06:13:46.379779872+05:00","level":"INFO","msg":"User registered successfully","email":"invalid-email"}
+{"time":"2024-11-17T06:13:46.380577808+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac208e"}
+{"time":"2024-11-17T06:13:46.380605305+05:00","level":"INFO","msg":"User registered successfully","email":"Brett_Dibbert17@gmail.com"}
+{"time":"2024-11-17T06:13:46.383265051+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:46.383307988+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:46.383314745+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:46.383529812+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:46.383656255+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:13:46.383679553+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:13:46.383702814+05:00","level":"INFO","msg":"starting user registration","email":"invalid-email","username":"testUser"}
+{"time":"2024-11-17T06:13:46.384172091+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:13:46.461685277+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:46.461750349+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:46.462815078+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739434ae2ab4cac67ac208f"}
+{"time":"2024-11-17T06:13:46.462867765+05:00","level":"INFO","msg":"User registered successfully","email":"invalid-email"}
+{"time":"2024-11-17T06:13:46.466133796+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:46.466188813+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:46.466199721+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:46.466133847+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:46.466319834+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:46.466326871+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:46.466466686+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:46.46659308+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:46.466636051+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:13:46.466738396+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:13:46.467501354+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:13:46.467890427+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:13:46.544385011+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:46.544431527+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:46.544615635+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:46.544644609+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:46.5481816+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:46.548233071+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:46.548241958+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:46.54834201+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:46.548373958+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:46.548381866+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:46.548420651+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:46.548522483+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:46.624804065+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:46.624857647+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:46.625436575+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:46.625471234+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:46.628500898+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:46.628551269+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:46.628570113+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:46.628561635+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:46.628587218+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:46.628592857+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:46.628828508+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:46.628839632+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:46.705668462+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:46.705709625+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:46.705785584+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:46.705812766+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:13:46.709423441+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:13:46.709490382+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:13:46.709502557+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:13:46.709740718+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:13:46.786928689+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:13:46.786978257+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:14:20.679066895+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:20.679161313+05:00","level":"INFO","msg":"starting user registration","email":"Rupert_Wisozk@yahoo.com","username":"Rupert_Wisozk@yahoo.com"}
+{"time":"2024-11-17T06:14:20.729670383+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:20.729762502+05:00","level":"INFO","msg":"starting user registration","email":"Justus.Murphy@yahoo.com","username":"Justus.Murphy@yahoo.com"}
+{"time":"2024-11-17T06:14:20.733412317+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:20.733478868+05:00","level":"INFO","msg":"starting user registration","email":"Krystina.Schmitt@yahoo.com","username":"Krystina.Schmitt@yahoo.com"}
+{"time":"2024-11-17T06:14:20.753542777+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:20.753710243+05:00","level":"INFO","msg":"starting user registration","email":"Rogelio25@hotmail.com","username":"Rogelio25@hotmail.com"}
+{"time":"2024-11-17T06:14:20.76207782+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436ce2ab4cac67ac2090"}
+{"time":"2024-11-17T06:14:20.762129654+05:00","level":"INFO","msg":"User registered successfully","email":"Rupert_Wisozk@yahoo.com"}
+{"time":"2024-11-17T06:14:20.783376135+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:14:20.783569932+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:14:20.783619671+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:14:20.783846824+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:14:20.784004633+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:14:20.784627001+05:00","level":"WARN","msg":"user not found","email":""}
+{"time":"2024-11-17T06:14:20.78471731+05:00","level":"ERROR","msg":"failed to get user during login","error":"user not found","email":""}
+{"time":"2024-11-17T06:14:20.784759122+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to get user: user not found"}
+{"time":"2024-11-17T06:14:20.84306532+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436ce2ab4cac67ac2091"}
+{"time":"2024-11-17T06:14:20.843247005+05:00","level":"INFO","msg":"User registered successfully","email":"Justus.Murphy@yahoo.com"}
+{"time":"2024-11-17T06:14:20.849786806+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436ce2ab4cac67ac2092"}
+{"time":"2024-11-17T06:14:20.849849998+05:00","level":"INFO","msg":"User registered successfully","email":"Krystina.Schmitt@yahoo.com"}
+{"time":"2024-11-17T06:14:20.857908055+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436ce2ab4cac67ac2093"}
+{"time":"2024-11-17T06:14:20.857970643+05:00","level":"INFO","msg":"User registered successfully","email":"Rogelio25@hotmail.com"}
+{"time":"2024-11-17T06:14:20.860021278+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:20.860191741+05:00","level":"INFO","msg":"starting user registration","email":"","username":""}
+{"time":"2024-11-17T06:14:20.862715277+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:20.862772646+05:00","level":"INFO","msg":"starting user registration","email":"","username":""}
+{"time":"2024-11-17T06:14:20.873928956+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:14:20.87400632+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:14:20.874017911+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:14:20.874267756+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:14:20.874431657+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:14:20.875052165+05:00","level":"WARN","msg":"user not found","email":""}
+{"time":"2024-11-17T06:14:20.875073621+05:00","level":"ERROR","msg":"failed to get user during login","error":"user not found","email":""}
+{"time":"2024-11-17T06:14:20.875099733+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to get user: user not found"}
+{"time":"2024-11-17T06:14:20.942389285+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436ce2ab4cac67ac2094"}
+{"time":"2024-11-17T06:14:20.94254122+05:00","level":"INFO","msg":"User registered successfully","email":""}
+{"time":"2024-11-17T06:14:20.943161788+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436ce2ab4cac67ac2095"}
+{"time":"2024-11-17T06:14:20.943208617+05:00","level":"INFO","msg":"User registered successfully","email":""}
+{"time":"2024-11-17T06:14:20.965560938+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:20.965637884+05:00","level":"INFO","msg":"starting user registration","email":"Krystina.Schmitt@yahoo.com","username":"Krystina.Schmitt@yahoo.com"}
+{"time":"2024-11-17T06:14:20.967121565+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:20.967211713+05:00","level":"INFO","msg":"starting user registration","email":"Rubie3@gmail.com","username":"Rubie3@gmail.com"}
+{"time":"2024-11-17T06:14:21.043613527+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436de2ab4cac67ac2096"}
+{"time":"2024-11-17T06:14:21.043655563+05:00","level":"INFO","msg":"User registered successfully","email":"Krystina.Schmitt@yahoo.com"}
+{"time":"2024-11-17T06:14:21.044969853+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436de2ab4cac67ac2097"}
+{"time":"2024-11-17T06:14:21.045003613+05:00","level":"INFO","msg":"User registered successfully","email":"Rubie3@gmail.com"}
+{"time":"2024-11-17T06:14:21.046824758+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:21.046869689+05:00","level":"INFO","msg":"starting user registration","email":"invalid-email","username":"testUser"}
+{"time":"2024-11-17T06:14:21.048809574+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:21.048860175+05:00","level":"INFO","msg":"starting user registration","email":"Justus.Murphy@yahoo.com","username":"Justus.Murphy@yahoo.com"}
+{"time":"2024-11-17T06:14:21.124486414+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436de2ab4cac67ac2098"}
+{"time":"2024-11-17T06:14:21.124542123+05:00","level":"INFO","msg":"User registered successfully","email":"invalid-email"}
+{"time":"2024-11-17T06:14:21.126523232+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436de2ab4cac67ac2099"}
+{"time":"2024-11-17T06:14:21.126567965+05:00","level":"INFO","msg":"User registered successfully","email":"Justus.Murphy@yahoo.com"}
+{"time":"2024-11-17T06:14:21.128750987+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:14:21.128794413+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:14:21.128801326+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:14:21.128964227+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:14:21.129068939+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:14:21.129603622+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:14:21.129900054+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:14:21.129929472+05:00","level":"INFO","msg":"starting user registration","email":"invalid-email","username":"testUser"}
+{"time":"2024-11-17T06:14:21.206244903+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:14:21.206291486+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:14:21.20696055+05:00","level":"INFO","msg":"user registration completed successfully","userID":"6739436de2ab4cac67ac209a"}
+{"time":"2024-11-17T06:14:21.206988415+05:00","level":"INFO","msg":"User registered successfully","email":"invalid-email"}
+{"time":"2024-11-17T06:14:21.209767851+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:14:21.209767868+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:14:21.209817272+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:14:21.209826649+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:14:21.209821239+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:14:21.209892628+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:14:21.210002551+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:14:21.210025246+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:14:21.210104122+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:14:21.210107661+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:14:21.210635437+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:14:21.210646611+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:14:21.290159674+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:14:21.290209248+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:14:21.29389078+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:14:21.293944343+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:14:21.293959682+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:14:21.294156896+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:14:21.296315581+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:14:21.296342587+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:14:21.2997505+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:14:21.29980789+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:14:21.299818911+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:14:21.30007528+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:14:21.370905614+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:14:21.370947408+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:14:21.375082813+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:14:21.37515356+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:14:21.37516433+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:14:21.37540689+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:14:21.377185289+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:14:21.377219869+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:14:21.380315869+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:14:21.380388318+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:14:21.380399339+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:14:21.380594128+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:14:21.452592016+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:14:21.452647739+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:14:21.457503877+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:14:21.457535496+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:14:21.460719072+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:14:21.460768988+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:14:21.46077837+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:14:21.460969739+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:14:21.537931576+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:14:21.537985076+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:15:26.97467775+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:15:26.974852458+05:00","level":"INFO","msg":"starting user registration","email":"Delilah.Stokes@gmail.com","username":"Delilah.Stokes@gmail.com"}
+{"time":"2024-11-17T06:15:27.055088718+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673943afbd3bbdc135a045e7"}
+{"time":"2024-11-17T06:15:27.055136407+05:00","level":"INFO","msg":"User registered successfully","email":"Delilah.Stokes@gmail.com"}
+{"time":"2024-11-17T06:15:27.06610016+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:15:27.066206355+05:00","level":"INFO","msg":"starting user registration","email":"","username":""}
+{"time":"2024-11-17T06:15:27.143175772+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673943afbd3bbdc135a045e8"}
+{"time":"2024-11-17T06:15:27.143234639+05:00","level":"INFO","msg":"User registered successfully","email":""}
+{"time":"2024-11-17T06:15:27.159032765+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:15:27.159095156+05:00","level":"INFO","msg":"starting user registration","email":"Delilah.Stokes@gmail.com","username":"Delilah.Stokes@gmail.com"}
+{"time":"2024-11-17T06:15:27.239795441+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673943afbd3bbdc135a045e9"}
+{"time":"2024-11-17T06:15:27.239850255+05:00","level":"INFO","msg":"User registered successfully","email":"Delilah.Stokes@gmail.com"}
+{"time":"2024-11-17T06:15:27.243485847+05:00","level":"INFO","msg":"Register user"}
+{"time":"2024-11-17T06:15:27.24355877+05:00","level":"INFO","msg":"starting user registration","email":"invalid-email","username":"testUser"}
+{"time":"2024-11-17T06:15:27.320436679+05:00","level":"INFO","msg":"user registration completed successfully","userID":"673943afbd3bbdc135a045ea"}
+{"time":"2024-11-17T06:15:27.320479716+05:00","level":"INFO","msg":"User registered successfully","email":"invalid-email"}
+{"time":"2024-11-17T06:15:27.323660898+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:15:27.323725642+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:15:27.323735421+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:15:27.323897489+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:15:27.324004142+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:0ad69c14-62ca-4932-8979-e8c9fa11cd47"}
+{"time":"2024-11-17T06:15:27.324506937+05:00","level":"INFO","msg":"successfully fetched user","email":""}
+{"time":"2024-11-17T06:15:27.400783286+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:15:27.400845737+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:15:27.404560992+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:15:27.404606578+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:15:27.404613847+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:15:27.404804198+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:15:27.480910642+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:15:27.480982205+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:15:27.48443484+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:15:27.484518687+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:15:27.484531075+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:15:27.484798927+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:15:27.561268028+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:15:27.561311572+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}
+{"time":"2024-11-17T06:15:27.56436127+05:00","level":"INFO","msg":"Login user"}
+{"time":"2024-11-17T06:15:27.564413993+05:00","level":"INFO","msg":"starting login process","email":""}
+{"time":"2024-11-17T06:15:27.564421653+05:00","level":"INFO","msg":"fetching user by email","email":""}
+{"time":"2024-11-17T06:15:27.56458772+05:00","level":"ERROR","msg":"failed to get user from redis","error":"WRONGTYPE Operation against a key holding the wrong kind of value","key":"user:3f34cf4d-888f-4968-b2e6-49fcf36890d3"}
+{"time":"2024-11-17T06:15:27.641565464+05:00","level":"ERROR","msg":"failed to verify password","error":"failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password","email":""}
+{"time":"2024-11-17T06:15:27.641626948+05:00","level":"ERROR","msg":"failed to login user","error":"failed to login: failed to verify password: failed to compare password: crypto/bcrypt: hashedPassword is not the hash of the given password"}

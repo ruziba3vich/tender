@@ -52,7 +52,7 @@ func Run() error {
 	redisService := redis.New(redisClient, logger)
 
 	// Initialize storage layer with MongoDB and Redis
-	storage := storage.New(db, logger, redisService)
+	storage := storage.New(db, cfg, logger, redisService)
 
 	// Initialize service layer
 	service := service.NewService(redisService, logger, storage)
