@@ -1,6 +1,6 @@
 services:
   app:
-    image: my-multi-service-app:latest
+    build: .  # Add this instead of using image directly
     container_name: my-multi-service-app
     ports:
       - "8080:8080"
@@ -9,6 +9,9 @@ services:
       - redis
     networks:
       - my-network
+    environment:  # Add environment variables for service connections
+      - MONGODB_URI=mongodb://mongodb:27017
+      - REDIS_URI=redis://redis:6379
 
   mongodb:
     image: mongo:6.0
@@ -17,15 +20,23 @@ services:
       - "27017:27017"
     networks:
       - my-network
+    volumes:  # Add volume for data persistence
+      - mongodb_data:/data/db
 
   redis:
-    image: redis:latest
+    image: redis:7.2  # Changed from 8.0 to 7.2
     container_name: my-redis
     ports:
       - "6379:6379"
     networks:
       - my-network
+    volumes:
+      - redis_data:/data
 
 networks:
   my-network:
     driver: bridge
+
+volumes:  # Define volumes
+  mongodb_data:
+  redis_data:

@@ -13,6 +13,7 @@ import (
 
 	"github.com/zohirovs/internal/config"
 	"github.com/zohirovs/internal/service"
+	websocket "github.com/zohirovs/internal/ws"
 )
 
 type Handler struct {
@@ -20,13 +21,16 @@ type Handler struct {
 	BidHandler          *BidHandler
 	NotificationHandler *NotificationHandler
 	TenderHandler       *TenderHandler
+	WsManager           *websocket.Manager
 }
 
 func NewHandler(logger *slog.Logger, service *service.Service, cfg *config.Config) *Handler {
+	wsManager := websocket.NewManager()
 	return &Handler{
 		UserHandler:         NewUserHandler(logger, service.User),
-		BidHandler:          NewBidHandler(logger, service.Bid),
+		BidHandler:          NewBidHandler(logger, service.Bid, wsManager),
 		NotificationHandler: NewNotificationHandler(logger, service.Notification),
 		TenderHandler:       NewTenderHandler(logger, service.Tender, cfg),
+		WsManager:           wsManager,
 	}
 }
