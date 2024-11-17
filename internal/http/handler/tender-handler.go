@@ -46,7 +46,7 @@ type SuccessResponse struct {
 // @Success      201 {object} models.Tender
 // @Failure      400 {object} ErrorResponse
 // @Failure      500 {object} ErrorResponse
-// @Router       /tenders [post]
+// @Router       /api/clients/tenders [post]
 func (h *TenderHandler) CreateTender(c *gin.Context) {
 	var createTender models.CreateTender
 
@@ -85,7 +85,7 @@ func (h *TenderHandler) CreateTender(c *gin.Context) {
 // @Success      200 {object} models.Tender
 // @Failure      404 {object} ErrorResponse
 // @Failure      500 {object} ErrorResponse
-// @Router       /tenders/{id} [get]
+// @Router       /api/clients/tenders/{id} [get]
 func (h *TenderHandler) GetTender(c *gin.Context) {
 	id := c.Param("id")
 
@@ -104,6 +104,10 @@ func (h *TenderHandler) GetTender(c *gin.Context) {
 	c.JSON(http.StatusOK, tender)
 }
 
+type StatusUpdateRequest struct {
+	Status models.Status `json:"status" binding:"required"`
+}
+
 // UpdateTenderStatus godoc
 // @Summary      Update the status of a tender
 // @Description  Update the status of an existing tender by its ID
@@ -116,16 +120,10 @@ func (h *TenderHandler) GetTender(c *gin.Context) {
 // @Failure      400     {object}  ErrorResponse
 // @Failure      404     {object}  ErrorResponse
 // @Failure      500     {object}  ErrorResponse
-// @Router       /tenders/{id}/status [put]
-type StatusUpdateRequest struct {
-	Status models.Status `json:"status" binding:"required"`
-}
-
+// @Router       /api/clients/tenders/{id}/status [put]
 func (h *TenderHandler) UpdateTenderStatus(c *gin.Context) {
-	// Extract tender ID from URL parameters
 	id := c.Param("id")
 
-	// Bind the JSON body to the struct
 	var req StatusUpdateRequest
 	if err := c.ShouldBindJSON(&req); err != nil {
 		h.logger.Error("failed to bind JSON", "error", err)
@@ -133,7 +131,6 @@ func (h *TenderHandler) UpdateTenderStatus(c *gin.Context) {
 		return
 	}
 
-	// Validate that the status is valid
 	validStatuses := map[models.Status]bool{
 		models.OPEN:    true,
 		models.CLOSED:  true,
@@ -170,7 +167,7 @@ func (h *TenderHandler) UpdateTenderStatus(c *gin.Context) {
 // @Success      204
 // @Failure      404 {object} ErrorResponse
 // @Failure      500 {object} ErrorResponse
-// @Router       /tenders/{id} [delete]
+// @Router       /api/clients/tenders/{id} [delete]
 func (h *TenderHandler) DeleteTender(c *gin.Context) {
 	id := c.Param("id")
 

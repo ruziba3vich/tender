@@ -3,6 +3,46 @@ definitions:
   gin.H:
     additionalProperties: {}
     type: object
+  github_com_zohirovs_internal_models.Bid:
+    properties:
+      bid_id:
+        type: string
+      comments:
+        type: string
+      contractor_id:
+        type: string
+      created_at:
+        type: string
+      delivery_time:
+        description: in days
+        type: integer
+      price:
+        type: number
+      status:
+        description: pending, accepted, rejected
+        type: string
+      tender_id:
+        type: string
+    required:
+    - delivery_time
+    - price
+    - tender_id
+    type: object
+  github_com_zohirovs_internal_models.CreateBid:
+    properties:
+      comments:
+        type: string
+      delivery_time:
+        type: integer
+      price:
+        type: number
+      tender_id:
+        type: string
+    required:
+    - delivery_time
+    - price
+    - tender_id
+    type: object
   github_com_zohirovs_internal_models.CreateTender:
     properties:
       attachment_url:
@@ -24,9 +64,9 @@ definitions:
     type: object
   github_com_zohirovs_internal_models.LoginRequest:
     properties:
-      email:
-        type: string
       password:
+        type: string
+      username:
         type: string
     type: object
   github_com_zohirovs_internal_models.RegisterUser:
@@ -72,6 +112,11 @@ definitions:
       error:
         type: string
     type: object
+  internal_http_handler.SuccessResponse:
+    properties:
+      message:
+        type: string
+    type: object
 host: localhost:8080
 info:
   contact:
@@ -86,6 +131,208 @@ info:
   title: '# MiniTwitter'
   version: 1.03.67.83.145
 paths:
+  /api/clients/tenders:
+    post:
+      consumes:
+      - application/json
+      description: Create a new tender and store it in the database
+      parameters:
+      - description: Tender object
+        in: body
+        name: tender
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_zohirovs_internal_models.CreateTender'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_zohirovs_internal_models.Tender'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+      summary: Create a new tender
+      tags:
+      - tenders
+  /api/clients/tenders/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: Delete a tender from the database by its ID
+      parameters:
+      - description: Tender ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "204":
+          description: No Content
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+      summary: Delete a tender
+      tags:
+      - tenders
+    get:
+      consumes:
+      - application/json
+      description: Retrieve a tender from the database by its ID
+      parameters:
+      - description: Tender ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/github_com_zohirovs_internal_models.Tender'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+      summary: Get tender by ID
+      tags:
+      - tenders
+  /api/clients/tenders/{id}/status:
+    put:
+      consumes:
+      - application/json
+      description: Update the status of an existing tender by its ID
+      parameters:
+      - description: Tender ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Tender Status
+        in: body
+        name: status
+        required: true
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/internal_http_handler.SuccessResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+      summary: Update the status of a tender
+      tags:
+      - tenders
+  /api/clients/tenders/{tender_id}/bids:
+    get:
+      consumes:
+      - application/json
+      description: Retrieve all bids submitted for a specific tender with optional
+        filtering
+      parameters:
+      - description: Tender ID
+        in: path
+        name: tender_id
+        required: true
+        type: string
+      - description: Minimum price filter
+        in: query
+        name: min_price
+        type: number
+      - description: Maximum price filter
+        in: query
+        name: max_price
+        type: number
+      - description: Maximum delivery time filter
+        in: query
+        name: max_delivery
+        type: number
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/github_com_zohirovs_internal_models.Bid'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+      summary: List all bids for a tender
+      tags:
+      - bids
+  /api/contractors/bids:
+    post:
+      consumes:
+      - application/json
+      description: Allows contractors to submit a bid for an open tender
+      parameters:
+      - description: Bid object
+        in: body
+        name: bid
+        required: true
+        schema:
+          $ref: '#/definitions/github_com_zohirovs_internal_models.CreateBid'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/github_com_zohirovs_internal_models.Bid'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/internal_http_handler.ErrorResponse'
+      summary: Submit a new bid for a tender
+      tags:
+      - bids
   /login:
     post:
       consumes:
@@ -146,91 +393,6 @@ paths:
       summary: Register a new user
       tags:
       - users
-  /tenders:
-    post:
-      consumes:
-      - application/json
-      description: Create a new tender and store it in the database
-      parameters:
-      - description: Tender object
-        in: body
-        name: tender
-        required: true
-        schema:
-          $ref: '#/definitions/github_com_zohirovs_internal_models.CreateTender'
-      produces:
-      - application/json
-      responses:
-        "201":
-          description: Created
-          schema:
-            $ref: '#/definitions/github_com_zohirovs_internal_models.Tender'
-        "400":
-          description: Bad Request
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-        "500":
-          description: Internal Server Error
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-      summary: Create a new tender
-      tags:
-      - tenders
-  /tenders/{id}:
-    delete:
-      consumes:
-      - application/json
-      description: Delete a tender from the database by its ID
-      parameters:
-      - description: Tender ID
-        in: path
-        name: id
-        required: true
-        type: string
-      produces:
-      - application/json
-      responses:
-        "204":
-          description: No Content
-        "404":
-          description: Not Found
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-        "500":
-          description: Internal Server Error
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-      summary: Delete a tender
-      tags:
-      - tenders
-    get:
-      consumes:
-      - application/json
-      description: Retrieve a tender from the database by its ID
-      parameters:
-      - description: Tender ID
-        in: path
-        name: id
-        required: true
-        type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/github_com_zohirovs_internal_models.Tender'
-        "404":
-          description: Not Found
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-        "500":
-          description: Internal Server Error
-          schema:
-            $ref: '#/definitions/internal_http_handler.ErrorResponse'
-      summary: Get tender by ID
-      tags:
-      - tenders
 schemes:
 - http
 - https

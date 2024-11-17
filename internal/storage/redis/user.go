@@ -119,6 +119,51 @@ func (u *UserCaching) GetUserByEmail(ctx context.Context, email string) (*models
 	return &user, redis.Nil
 }
 
+func (u *UserCaching) GetUserByUsername(ctx context.Context, username string) (*models.User, error) {
+	user := models.User{}
+
+	// Get all users from Redis
+	keys, err := u.redisClient.Keys(ctx, "user:*").Result()
+	if err != nil {
+		u.logger.Error("failed to get user keys from redis",
+			"error", err,
+			"username", username,
+		)
+		return &user, err
+	}
+
+	// Iterate through users to find matching username
+	for _, key := range keys {
+		values, err := u.redisClient.HGetAll(ctx, key).Result()
+		if err != nil {
+			u.logger.Error("failed to get user from redis",
+				"error", err,
+				"key", key,
+			)
+			continue
+		}
+
+		if values["username"] == username {
+			createdAt, _ := time.Parse(time.RFC3339, values["createdAt"])
+			updatedAt, _ := time.Parse(time.RFC3339, values["updatedAt"])
+			deletedAt, _ := time.Parse(time.RFC3339, values["deletedAt"])
+
+			user = models.User{
+				ID:        values["id"],
+				Username:  values["username"],
+				Email:     values["email"],
+				Password:  values["password"],
+				CreatedAt: createdAt,
+				UpdatedAt: updatedAt,
+				DeletedAt: deletedAt,
+			}
+			return &user, nil
+		}
+	}
+
+	return &user, redis.Nil
+}
+
 func (u *UserCaching) StoreEmailAndCode(ctx context.Context, email string, code int) error {
 	codeKey := "verification_code:" + email
 	err := u.redisClient.Set(ctx, codeKey, code, time.Minute*1).Err()

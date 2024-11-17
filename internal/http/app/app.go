@@ -28,25 +28,13 @@ import (
 	"github.com/casbin/casbin/v2"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/zohirovs/internal/config"
 	_ "github.com/zohirovs/internal/http/app/docs"
 	"github.com/zohirovs/internal/http/handler"
-
-	swaggerFiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
-// Run initializes and starts the HTTP server for the MiniTwitter API.
-// It sets up routing, middleware, and Swagger documentation.
-//
-// Parameters:
-// - handler: Pointer to the Handler struct containing all route handlers
-// - logger: Structured logger for logging
-// - config: Application configuration
-// - enforcer: Casbin enforcer for authorization
-//
-// Returns:
-// - error: Any error that occurs during server startup
 func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, enforcer *casbin.Enforcer) error {
 	router := gin.Default()
 
@@ -66,23 +54,43 @@ func Run(handler *handler.Handler, logger *slog.Logger, config *config.Config, e
 	router.Use(gin.Logger())
 	router.Use(gin.Recovery())
 
-	// API ednpoints
-
+	// API endpoints
 	// User endpoints
 	users := router.Group("/")
 	{
 		users.POST("/register", handler.UserHandler.RegisterUser)
 		users.POST("/login", handler.UserHandler.LoginUser)
-		tenders := router.Group("/tenders")
-		// tenders.Use(middleware.AuthzMiddleware("/tenders", enforcer, config))
+	}
+
+	// Client endpoints group
+	clients := router.Group("api/clients")
+	{
+		// Tender endpoints
+		tenders := clients.Group("/tenders")
 		{
 			tenders.POST("", handler.TenderHandler.CreateTender)
 			tenders.GET("/:id", handler.TenderHandler.GetTender)
-			tenders.PUT(":id/status", handler.TenderHandler.UpdateTenderStatus)
+			tenders.PUT("/:id/status", handler.TenderHandler.UpdateTenderStatus)
 			tenders.DELETE("/:id", handler.TenderHandler.DeleteTender)
 		}
 
-		// Start the server
-		return router.Run(config.Server.Port)
+		// Bid endpoints for clients (viewing bids)
+		bids := clients.Group("/bids")
+		{
+			bids.GET("/tender/:id", handler.BidHandler.ListBidsForTender) // Changed from /:tender_id/bids to /bids/tender/:id
+		}
 	}
+
+	// Contractor endpoints group
+	contractors := router.Group("api/contractors")
+	{
+		// Bid endpoints for contractors (submitting bids)
+		bids := contractors.Group("/bids")
+		{
+			bids.POST("", handler.BidHandler.SubmitBid)
+		}
+	}
+
+	// Start the server
+	return router.Run(config.Server.Port)
 }

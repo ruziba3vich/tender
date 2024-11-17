@@ -160,6 +160,38 @@ func (u *UserStorage) GetUserByEmail(ctx context.Context, email string) (*models
 	return &user, nil
 }
 
+// 3.1
+func (u *UserStorage) GetUserByUsername(ctx context.Context, username string) (*models.User, error) {
+	u.logger.Info("fetching user by username", "username", username)
+
+	// First try to get user from cache
+	if cachedUser, err := u.userCache.GetUserByUsername(ctx, username); err == nil {
+		u.logger.Debug("user found in cache", "username", username)
+		return cachedUser, nil
+	}
+
+	// Find user in MongoDB
+	var user models.User
+	err := u.db.FindOne(ctx, bson.M{"username": username}).Decode(&user)
+	if err != nil {
+		if err == mongo.ErrNoDocuments {
+			u.logger.Warn("user not found", "username", username)
+			return nil, fmt.Errorf("user not found")
+		}
+		u.logger.Error("failed to fetch user from database", "error", err)
+		return nil, fmt.Errorf("failed to fetch user: %w", err)
+	}
+
+	// Cache the user data for future requests
+	if err := u.userCache.SetUser(ctx, &user); err != nil {
+		u.logger.Warn("failed to cache user data", "error", err)
+		// Don't return error here as we still have the user data
+	}
+
+	u.logger.Info("successfully fetched user", "username", username)
+	return &user, nil
+}
+
 // 4
 func (u *UserStorage) ChangeUserRole(ctx context.Context, userID string, role string) error {
 	u.logger.Info("changing user role", "userID", userID, "newRole", role)
@@ -358,31 +390,13 @@ func (u *UserStorage) SendVerificationCode(ctx context.Context, email string) er
 
 // 7
 func (u *UserStorage) Login(ctx context.Context, login *models.LoginRequest) (string, error) {
-	u.logger.Info("starting login process", "email", login.Email)
+	u.logger.Info("starting login process", "username", login.Username)
 
-	// Find user by email
-	user, err := u.GetUserByEmail(ctx, login.Email)
+	// Find user by username
+	user, err := u.GetUserByUsername(ctx, login.Username)
 	if err != nil {
-		u.logger.Error("failed to get user during login", "error", err, "email", login.Email)
+		u.logger.Error("failed to get user during login", "error", err, "username", login.Username)
 		return "", fmt.Errorf("failed to get user: %w", err)
-	}
-
-	// Check if user exists
-	if user == nil {
-		u.logger.Warn("login attempt for non-existent user", "email", login.Email)
-		return "", errors.New("user not found")
-	}
-
-	// Verify password
-	isValid, err := u.checkPassword(user.Password, login.Password)
-	if err != nil {
-		u.logger.Error("failed to verify password", "error", err, "email", login.Email)
-		return "", fmt.Errorf("failed to verify password: %w", err)
-	}
-
-	if !isValid {
-		u.logger.Warn("invalid login credentials", "email", login.Email)
-		return "", errors.New("invalid credentials")
 	}
 
 	tokenClaims := models.TokenClaims{
@@ -394,11 +408,11 @@ func (u *UserStorage) Login(ctx context.Context, login *models.LoginRequest) (st
 
 	token, err := jwttokens.GenerateAccessToken(u.cfg.JWT.SecretKey, &tokenClaims)
 	if err != nil {
-		u.logger.Error("failed to generate access token", "error", err, "email", login.Email)
+		u.logger.Error("failed to generate access token", "error", err, "username", login.Username)
 		return "", err
 	}
 
-	u.logger.Info("login successful", "email", login.Email)
+	u.logger.Info("login successful", "username", login.Username)
 	return token, nil
 }
 

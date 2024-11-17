@@ -1,12 +1,15 @@
 package handler
 
 import (
+	"fmt"
 	"log/slog"
 	"net/http"
+	"regexp"
 
 	"github.com/gin-gonic/gin"
 	"github.com/zohirovs/internal/models"
 	"github.com/zohirovs/internal/service"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type UserHandler struct {
@@ -38,11 +41,35 @@ func (h *UserHandler) RegisterUser(c *gin.Context) {
 	var user models.RegisterUser
 	if err := c.ShouldBindJSON(&user); err != nil {
 		h.logger.Error("failed to bind JSON", "error", err)
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
+		c.JSON(401, gin.H{"error": "Invalid request"})
+		return
+	}
+
+	if user.Role != "client" && user.Role != "contractor" {
+		h.logger.Error("invalid role")
+		c.JSON(400, gin.H{"message": "invalid role"})
+		return
+	}
+
+	if user.Email == "" || user.Username == "" {
+		h.logger.Error("username or email cannot be empty")
+		c.JSON(400, gin.H{"message": "username or email cannot be empty"})
+		return
+	}
+
+	isValid := h.isValidEmail(user.Email)
+	if isValid == false {
+		h.logger.Error("invalid email format")
+		c.JSON(400, gin.H{"message": "invalid email format"})
 		return
 	}
 
 	token, err := h.userService.RegisterUser(c.Request.Context(), &user)
+	if token == "Duplicate" {
+		c.JSON(400, gin.H{"message": "Email already exists"})
+		return
+	}
+
 	if err != nil {
 		h.logger.Error("failed to register user", "error", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to register user"})
@@ -74,13 +101,44 @@ func (h *UserHandler) LoginUser(c *gin.Context) {
 		return
 	}
 
-	token, err := h.userService.Login(c.Request.Context(), &user)
-	if err != nil {
-		h.logger.Error("failed to login user", "error", err)
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to login user"})
+	if user.Username == "" || user.Password == "" {
+		h.logger.Error("username or password cannot be empty")
+		c.JSON(400, gin.H{"message": "Username and password are required"})
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"token": token})
-	h.logger.Info("User logged in successfully", "email", user.Email)
+	token, err := h.userService.Login(c.Request.Context(), &user)
+
+	if token == "not found" {
+		c.JSON(404, gin.H{"message": "User not found"})
+		return
+	}
+
+	if err != nil {
+		h.logger.Error("failed to login user", "error", err)
+		c.JSON(401, gin.H{"message": "Invalid username or password"})
+		return
+	}
+
+	c.JSON(200, gin.H{"token": token})
+	h.logger.Info("User logged in successfully", "username", user.Username)
+}
+
+func (h *UserHandler) isValidEmail(email string) bool {
+	re := regexp.MustCompile(`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$`)
+	if re == nil {
+		return false
+	}
+	return re.MatchString(email)
+}
+
+func (h *UserHandler) hashPassword(password string) (string, error) {
+	h.logger.Debug("hashing password")
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+	if err != nil {
+		h.logger.Error("failed to hash password", "error", err)
+		return "", fmt.Errorf("failed to hash password: %w", err)
+	}
+	h.logger.Debug("password hashed successfully")
+	return string(hashedPassword), nil
 }
