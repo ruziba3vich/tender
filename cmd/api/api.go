@@ -78,6 +78,8 @@ func Run() error {
 		return err
 	}
 
+	log.Println("SERVER HAST STARTED")
+
 	// Start the HTTP server
 	return app.Run(handler, logger, cfg, enforcer)
 }
